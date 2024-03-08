@@ -43,7 +43,7 @@
 	<link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/revolution.min.css">
 
 </head>
-<body id="bg">
+<body id="bg" id="home">
 <div class="page-wraper">
 		<div id="loading-area"></div>
 		<!-- header -->
@@ -120,34 +120,29 @@
 
 								</a>
 							</div>
+							<div class="links">
 							<ul class="nav navbar-nav">
-								<li class="active has-mega-menu homedemo">
-									<a href="home.php">Home</a>
+								<li class="has-mega-menu homedemo">
+									<a data-active="home" href="home.php">Home</a>
 								</li>
-								<!-- <li>
-									<a href="javascript:;">Features</a>
-								</li>
-								<li class="has-mega-menu"> <a href="javascript:;">Pages
-									</a>
-								</li> -->
 								<li>
-									<a href="javascript:;">About Us<i class="fas fa-chevron-down"></i></a>
+									<a data-active="about" href="javascript:;">About Us<i class="fas fa-chevron-down"></i></a>
 									<ul class="sub-menu">
 										<li><a href="about.php">About</a></li>
 										<li><a href="organization.php">Organization</a></li>
 									</ul>
 								</li>
-								<li class="has-mega-menu"> <a href="donate.php">Donate</a>
+								<li class="has-mega-menu"> <a data-active="donate" href="donate.php">Donate</a>
 								</li>
 								<li>
-									<a href="contactus.php">Contact Us</a>
+									<a  data-active="contact" href="contactus.php">Contact Us</a>
 								</li>
 
 								<li>
 									<a href="admin/login.php"><i class=""></i>Login</a>
 								</li>
 							</ul>
-
+							</div>
 							<div class="dlab-social-icon">
 								<ul>
 									<li><a class="site-button facebook sharp-sm outline fab fa-facebook-f" href="javascript:void(0);"></a></li>

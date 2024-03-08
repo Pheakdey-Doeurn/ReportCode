@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> TKBSS | About Us</title>
 </head>
-<body>
+<body id="about">
     	<!-- Content Section -->
 	<div class="section-full content-inner bg-white">
 		<div class="container">
