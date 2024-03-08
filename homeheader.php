@@ -122,7 +122,7 @@
 							</div>
 							<ul class="nav navbar-nav">
 								<li class="active has-mega-menu homedemo">
-									<a href="javascript:;">Home</a>
+									<a href="home.php">Home</a>
 								</li>
 								<!-- <li>
 									<a href="javascript:;">Features</a>
@@ -133,14 +133,14 @@
 								<li>
 									<a href="javascript:;">About Us<i class="fas fa-chevron-down"></i></a>
 									<ul class="sub-menu">
-										<li><a href="shop.html">About</a></li>
-										<li><a href="shop-sidebar.html">Organization</a></li>
+										<li><a href="about.php">About</a></li>
+										<li><a href="organization.php">Organization</a></li>
 									</ul>
 								</li>
-								<li class="has-mega-menu"> <a href="javascript:;">Donate</a>
+								<li class="has-mega-menu"> <a href="donate.php">Donate</a>
 								</li>
 								<li>
-									<a href="javascript:;">Contact Us</a>
+									<a href="contactus.php">Contact Us</a>
 								</li>
 
 								<li>

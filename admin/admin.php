@@ -287,7 +287,7 @@
                                             class="fas fa-angle-right"></i>Teacher Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                    <a href="add-teacher.php" class="nav-link"><i class="fas fa-angle-right"></i>Add
                                         Teacher</a>
                                 </li>                            
                             </ul>
@@ -352,10 +352,6 @@
                         <li class="nav-item">
                             <a href="messaging.html" class="nav-link"><i
                                     class="flaticon-chat"></i><span>Messeage</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="map.html" class="nav-link"><i
-                                    class="flaticon-planet-earth"></i><span>Map</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="account-settings.html" class="nav-link"><i

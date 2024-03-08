@@ -6,19 +6,9 @@
 			<h2 class="title">សកម្មភាព​​ទូទៅ</h2>
 			<p>ការសិក្សារបស់សមណៈសិស្ស និង​ ក្នុងកម្មវិធីផ្សេងៗ</p>
 		</div>
+
 		<?php
-		define( 'DB_HOST', 'localhost');
-		define( 'DB_USER', 'root' );         
-		define( 'DB_PASSWORD', '' );  	
-		define ( 'DB_NAME', 'schooldb'); 
-
-		$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-		if (!$conn) {
-			die("Connection failed: " . mysqli_connect_error());
-		}
-		// Query to retrieve recent posts
-		$postQuery = "SELECT * FROM post ORDER BY date DESC LIMIT 5"; // Fetching 5 most recent posts
+		$postQuery = "SELECT * FROM post ORDER BY id DESC LIMIT 6"; // Fetching 5 most recent posts
 		$result = mysqli_query($conn, $postQuery);
 		?>
 		<div class="blog-carousel owl-none owl-carousel">
@@ -33,9 +23,11 @@
 							<div class="blog-post blog-grid blog-rounded blog-effect1 post-style-1">
 								<div class="dlab-post-media dlab-img-effect">
 									<?php if ($row['image'] != '') : ?>
-										<img src="<?= $row['image']; ?>" alt="Img">
+										<!-- Display the post image if available -->
+										<img src="<?= $row['image']; ?>" class="w-100 rounded" alt="Img">
 									<?php else : ?>
-										<img src="./admin/uploads/Monk.jpg" alt="Img">
+										<!-- Display a placeholder image if no image is available -->
+										<img src="admin/uploads/no_pictures.png" class="w-100 rounded" alt="Img">
 									<?php endif; ?>
 								</div>
 								<div class="dlab-info p-a20">
@@ -67,8 +59,7 @@
 			} else {
 				echo "<h4>No Record Found</h4>";
 			}
-			// Close the database connection
-			mysqli_close($conn);
+
 			?>
 		</div>
 	</div>

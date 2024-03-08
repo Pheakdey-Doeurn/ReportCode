@@ -24,10 +24,10 @@
 														<h5 class="m-b30 text-white">Useful Link</h5>
 														<ul>
 															<li><a href="home.php">Home</a></li>
-															<li><a href="javascript:void(0);">About Us </a></li>
-															<li><a href="javascript:void(0);">Contact Us</a></li>
-															<li><a href="javascript:void(0);">Donate</a></li>
-															<li><a href="javascript:void(0);">Log In</a></li>
+															<li><a href="about.php">About Us </a></li>
+															<li><a href="contactus.php">Contact Us</a></li>
+															<li><a href="donate.php">Donate</a></li>
+															<li><a href="admin/login.php">Log In</a></li>
 														</ul>
 													</div>
 												</div>

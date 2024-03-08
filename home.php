@@ -1,5 +1,4 @@
 <?php
-	$pageTitle = 'post-create';
 	include 'homeheader.php';
     include 'sendmail.php'; 
 ?>
@@ -326,7 +325,7 @@
 			<div class="row">
 				<div class="col-md-7">
 					<div class="section-title">
-						<h2 class="mt-2">ទាក់ទងតាមរយះ</h2>
+						<h2 class="mt-2 text-md-center">ទាក់ទងតាមរយៈ</h2>
 					</div>
 				</div>
 				<div class="row">

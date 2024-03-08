@@ -108,7 +108,6 @@
                             <div class="item-title d-md-none text-16 mg-l-10">Message</div>
                             <span>5</span>
                         </a>
-
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="item-header">
                                 <h6 class="item-title">05 Message</h6>
@@ -282,7 +281,7 @@
                                             class="fas fa-angle-right"></i>Teacher Details</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-teacher.html" class="nav-link"><i class="fas fa-angle-right"></i>Add
+                                    <a href="add-teacher.php" class="nav-link"><i class="fas fa-angle-right"></i>Add
                                         Teacher</a>
                                 </li>                            
                             </ul>
@@ -347,10 +346,6 @@
                         <li class="nav-item">
                             <a href="messaging.html" class="nav-link"><i
                                     class="flaticon-chat"></i><span>Messeage</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="map.html" class="nav-link"><i
-                                    class="flaticon-planet-earth"></i><span>Map</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="account-settings.html" class="nav-link"><i
