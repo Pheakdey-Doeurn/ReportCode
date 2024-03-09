@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Meta -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="DexignZone">
@@ -43,8 +44,9 @@
 	<link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/revolution.min.css">
 
 </head>
+
 <body id="bg" id="home">
-<div class="page-wraper">
+	<div class="page-wraper">
 		<div id="loading-area"></div>
 		<!-- header -->
 		<header class="site-header mo-left header ext-header navstyle1">
@@ -121,27 +123,27 @@
 								</a>
 							</div>
 							<div class="links">
-							<ul class="nav navbar-nav">
-								<li class="has-mega-menu homedemo">
-									<a data-active="home" href="home.php">Home</a>
-								</li>
-								<li>
-									<a data-active="about" href="javascript:;">About Us<i class="fas fa-chevron-down"></i></a>
-									<ul class="sub-menu">
-										<li><a href="about.php">About</a></li>
-										<li><a href="organization.php">Organization</a></li>
-									</ul>
-								</li>
-								<li> <a data-active="donate" href="donate.php">Donate</a>
-								</li>
-								<li>
-									<a  data-active="contact" href="contactus.php">Contact Us</a>
-								</li>
+								<ul class="nav navbar-nav">
+									<li class="has-mega-menu homedemo">
+										<a data-active="home" href="home.php">Home</a>
+									</li>
+									<li>
+										<a data-active="about" href="javascript:;">About Us<i class="fas fa-chevron-down"></i></a>
+										<ul class="sub-menu">
+											<li><a href="about.php">About</a></li>
+											<li><a href="organization.php">Organization</a></li>
+										</ul>
+									</li>
+									<li> <a data-active="donate" href="donate.php">Donate</a>
+									</li>
+									<li>
+										<a data-active="contact" href="contactus.php">Contact Us</a>
+									</li>
 
-								<li>
-									<a href="admin/login.php"><i class=""></i>Login</a>
-								</li>
-							</ul>
+									<li>
+										<a href="admin/login.php"><i class=""></i>Login</a>
+									</li>
+								</ul>
 							</div>
 							<div class="dlab-social-icon">
 								<ul>
@@ -158,8 +160,6 @@
 			<!-- main header END -->
 		</header>
 		<!-- header END -->
-
-			<!-- ===== active menu ====== -->
-			<script src="js/actionmenu.js"></script>
 </body>
+
 </html>

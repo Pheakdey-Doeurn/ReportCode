@@ -9,7 +9,7 @@ include 'sendmail.php'; ?>
 	<title> TKBSS | Contact Us </title>
 </head>
 
-<body id="contact">
+<body id="bg" id="contact">
 	<div class="page-content bg-gray">
 		<!-- inner page banner -->
 		<div class="dlab-bnr-inr overlay-black-middle bg-pt" style="background-image:url(images/banner/contact.jpg);">
@@ -31,13 +31,16 @@ include 'sendmail.php'; ?>
         <!-- contact area -->
         <div class="section-full content-inner contact-style-1">
 			<div class="container">
-                <div class="row dzseth">
+				<!--alert messages start-->
+				<?php echo $alert; ?>
+   		   	    <!--alert messages end-->
+                <div class="row dzseth d-flex justify-content-center">
 					<div class="col-lg-3 col-md-6 col-sm-6 m-b30">
 						<div class="icon-bx-wraper bx-style-1 bg-white p-lr20 p-tb30 center seth radius-sm">
 							<div class="icon-lg text-primary m-b20"> <a href="javascript:void(0);" class="icon-cell"><i class="ti-location-pin"></i></a> </div>
 							<div class="icon-content">
 								<h5 class="dlab-tilte text-uppercase">Address</h5>
-								<p>123 West Street, Melbourne Victoria 3000 Australia</p>
+								<p>Kouk Kdouch, Taphoung, Thmor koul,Battambang, Cambodia</p>
 							</div>
 						</div>
 					</div>
@@ -59,15 +62,6 @@ include 'sendmail.php'; ?>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 m-b30">
-						<div class="icon-bx-wraper bx-style-1 bg-white p-lr20 p-tb30 center seth radius-sm">
-							<div class="icon-lg text-primary m-b20"> <a href="javascript:void(0);" class="icon-cell"><i class="ti-printer"></i></a> </div>
-							<div class="icon-content">
-								<h5 class="dlab-tilte text-uppercase">Fax</h5>
-								<p>+61 3 8376 6284 <br> +23 123 456 7890</p>
-							</div>
-						</div>
-					</div>
 				</div>
                 <div class="row">
 					<!-- Left part start -->
@@ -75,41 +69,34 @@ include 'sendmail.php'; ?>
                         <div class="p-a30 bg-white clearfix border-1 radius-sm">
 							<h3>Send Message Us</h3>
 							<div class="dzFormMsg"></div>
-							<form method="post" class="dzForm" action="https://eduzone.dexignzone.com/xhtml/script/contact_smtp.php">
+							<form method="POST" class="dzForm" action="">
 								<input type="hidden" value="Contact" name="dzToDo" >
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <input name="dzName" type="text" required class="form-control" placeholder="Your Name">
+                                                <input name="name" type="text" required class="form-control" placeholder="Your Name">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="input-group"> 
-											    <input name="dzEmail" type="email" class="form-control" required  placeholder="Your Email Id" >
+											    <input name="email" type="email" class="form-control" required  placeholder="Your Email" >
                                             </div>
                                         </div>
                                     </div>
-									<div class="col-md-6">
+									<div class="col-md-12">
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <input name="dzOther[Phone]" type="text" required class="form-control" placeholder="Phone">
-                                            </div>
-                                        </div>
-                                    </div>
-									<div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input name="dzOther[Subject]" type="text" required class="form-control" placeholder="Subject">
+                                                <input name="subject" type="text" required class="form-control" placeholder="Subject">
                                             </div>
                                         </div>
                                     </div>
                                      <div class="col-md-12">
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <textarea name="dzMessage" rows="4" class="form-control" required placeholder="Your Message..."></textarea>
+                                                <textarea name="message" rows="4" class="form-control" required placeholder="Your Message..."></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -147,5 +134,4 @@ include 'sendmail.php'; ?>
 		<!-- Content END-->
 		<?php include 'homefooter.php' ?>
 </body>
-
 </html>
