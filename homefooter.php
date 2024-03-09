@@ -80,5 +80,5 @@
 							<script src="js/rev.slider.js"></script>
 							<!--=============== MAIN JS ===============-->
 							<script src="assets/js/main.js"></script>
-							<!-- ===== action menu ====== -->
+							<!-- ===== active menu ====== -->
 							<script src="js/actionmenu.js"></script>

@@ -12,7 +12,7 @@
 
 </head>
 
-<body id="bg">
+<body id="bg" id="home">
 
 	<?php include 'slider.php' ?>
 	<?php include 'actionstudents.php' ?>

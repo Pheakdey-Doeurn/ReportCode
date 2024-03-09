@@ -1,13 +1,32 @@
 <?php include 'homeheader.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> TKBSS | About Us</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> TKBSS | About Us</title>
 </head>
+
 <body id="about">
-    	<!-- Content Section -->
+<div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="dlab-bnr-inr overlay-black-middle bg-pt" style="background-image:url(images/banner/tkbss1.jpg);">
+            <div class="container">
+                <div class="dlab-bnr-inr-entry">
+                    <h1 class="text-white">About Us</h1>
+					<!-- Breadcrumb row -->
+					<div class="breadcrumb-row">
+						<ul class="list-inline">
+							<li><a href="home.php">Home</a></li>
+							<li>About Us </li>
+						</ul>
+					</div>
+					<!-- Breadcrumb row END -->
+                </div>
+            </div>
+        </div>
+	<!-- Content Section -->
 	<div class="section-full content-inner bg-white">
 		<div class="container">
 			<div class="row align-items-center">
@@ -83,6 +102,7 @@
 
 
 
-<?php include 'homefooter.php' ?>
+	<?php include 'homefooter.php' ?>
 </body>
+
 </html>

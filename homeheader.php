@@ -132,7 +132,7 @@
 										<li><a href="organization.php">Organization</a></li>
 									</ul>
 								</li>
-								<li class="has-mega-menu"> <a data-active="donate" href="donate.php">Donate</a>
+								<li> <a data-active="donate" href="donate.php">Donate</a>
 								</li>
 								<li>
 									<a  data-active="contact" href="contactus.php">Contact Us</a>
@@ -158,5 +158,8 @@
 			<!-- main header END -->
 		</header>
 		<!-- header END -->
+
+			<!-- ===== active menu ====== -->
+			<script src="js/actionmenu.js"></script>
 </body>
 </html>
