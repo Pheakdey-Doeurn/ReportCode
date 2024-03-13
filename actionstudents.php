@@ -38,7 +38,7 @@
 										</ul>
 									</div>
 									<div class="dlab-post-title">
-										<h4 class="post-title"><a href="#"><?= $row['title'] ?></a></h4>
+										<h4 class="post-title"><a href="view_post.php"><?= $row['title'] ?></a></h4>
 									</div>
 									<div class="dlab-post-text">
 										<p><?= $row['text_body'] ?></p>
@@ -59,7 +59,6 @@
 			} else {
 				echo "<h4>No Record Found</h4>";
 			}
-
 			?>
 		</div>
 	</div>
