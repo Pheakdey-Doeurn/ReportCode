@@ -1,5 +1,4 @@
-<?php include 'homeheader.php';
-include 'sendmail.php'; ?>
+<?php include 'homeheader.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,9 +30,6 @@ include 'sendmail.php'; ?>
         <!-- contact area -->
         <div class="section-full content-inner contact-style-1">
 			<div class="container">
-				<!--alert messages start-->
-				<?php echo $alert; ?>
-   		   	    <!--alert messages end-->
                 <div class="row dzseth d-flex justify-content-center">
 					<div class="col-lg-3 col-md-6 col-sm-6 m-b30">
 						<div class="icon-bx-wraper bx-style-1 bg-white p-lr20 p-tb30 center seth radius-sm">
@@ -69,34 +65,34 @@ include 'sendmail.php'; ?>
                         <div class="p-a30 bg-white clearfix border-1 radius-sm">
 							<h3>Send Message Us</h3>
 							<div class="dzFormMsg"></div>
-							<form method="POST" class="dzForm" action="">
-								<input type="hidden" value="Contact" name="dzToDo" >
+							<form action="#">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group ">
                                             <div class="input-group">
-                                                <input name="name" type="text" required class="form-control" placeholder="Your Name">
+												
+                                                <input name="name" type="text"  class="form-control" placeholder="Your Name">												
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group ">
                                             <div class="input-group"> 
-											    <input name="email" type="email" class="form-control" required  placeholder="Your Email" >
+											    <input name="email" type="email" class="form-control"   placeholder="Your Email" >
                                             </div>
                                         </div>
                                     </div>
 									<div class="col-md-12">
                                         <div class="form-group">
-                                            <div class="input-group">
-                                                <input name="subject" type="text" required class="form-control" placeholder="Subject">
+                                            <div class="input-group ">
+                                                <input name="sub" type="text"  class="form-control" placeholder="Subject">
                                             </div>
                                         </div>
                                     </div>
                                      <div class="col-md-12">
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <textarea name="message" rows="4" class="form-control" required placeholder="Your Message..."></textarea>
+                                                <textarea name="message" rows="4" class="form-control"  placeholder="Your Message..."></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -104,12 +100,13 @@ include 'sendmail.php'; ?>
 										<div class="form-group form-recaptcha">
 											<div class="input-group">
 												<div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-												<input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
+												<input class="form-control d-none" style="display:none;" data-recaptcha="true"  data-error="Please complete the Captcha">
 											</div>
 										</div>
 									</div>
-                                    <div class="col-md-12">
-                                        <button name="submit" type="submit" value="Submit" class="site-button "> <span>Submit</span> </button>
+                                    <div class="col-md-12 button-area">
+										<span class="text-center "></span>
+                                        <button type="submit" class="site-button ">Submit</button>
                                     </div>
                                 </div>
                             </form>
@@ -126,11 +123,7 @@ include 'sendmail.php'; ?>
         </div>
         <!-- contact area  END -->
 		<!-- Content -->
-		<script type=" text/javascript">
-			if (window.history.replaceState) {
-				window.history.replaceState(null, null, window.location.href);
-			}
-		</script>
+		<script src="js/script.js"></script>
 		<!-- Content END-->
 		<?php include 'homefooter.php' ?>
 </body>
