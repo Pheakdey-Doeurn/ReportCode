@@ -1,4 +1,4 @@
-<?php include 'homeheader.php'; ?>
+<?php $page = 'about'; include 'homeheader.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

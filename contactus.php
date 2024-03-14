@@ -1,4 +1,4 @@
-<?php include 'homeheader.php' ?>
+<?php $page = 'contact'; include 'homeheader.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +8,8 @@
 	<title> TKBSS | Contact Us </title>
 </head>
 
-<body id="bg" id="contact">
-	<div class="page-content bg-gray">
+<body>
+	
 		<!-- inner page banner -->
 		<div class="dlab-bnr-inr overlay-black-middle bg-pt" style="background-image:url(images/banner/contact.jpg);">
 			<div class="container">
@@ -124,7 +124,9 @@
         <!-- contact area  END -->
 		<!-- Content -->
 		<script src="js/script.js"></script>
+		<scrip src="js/jquery.min.js"></script>
 		<!-- Content END-->
 		<?php include 'homefooter.php' ?>
 </body>
+
 </html>

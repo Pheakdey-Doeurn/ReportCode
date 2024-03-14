@@ -1,24 +1,52 @@
 <?php
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $sub = $_POST['sub'];
-  $message = $_POST['message'];
 
-  if(!empty($email) && !empty($message)){
-    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-      $receiver = "dpheakdey.kh@gmail.com"; //enter that email address where you want to receive all messages
-      $subject = "From: $name <$email>";
-      $body = "Name: $name\nEmail: $email\nSub: $sub\n\nMessage:\n$message\n\nRegards,\n$name";
-      $sender = "From: $email";
-      if(mail($receiver, $subject, $body, $sender)){
-         echo "Your message has been sent";
-      }else{
-         echo "Sorry, failed to send your message!";
-      }
-    }else{
-      echo "Enter a valid email address!";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once 'phpmailer/Exception.php';
+require_once 'phpmailer/PHPMailer.php';
+require_once 'phpmailer/SMTP.php';
+
+$mail = new PHPMailer(true);
+
+try {
+  $mail->isSMTP();
+  $mail->Host = 'smtp.gmail.com';
+  $mail->SMTPAuth = true;
+  $mail->Username = 'dpheakdey.kh@gmail.com';
+  $mail->Password = 'ldfn uopk ouys djoo';
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+  $mail->Port = '587';
+
+  $name = htmlspecialchars($_POST['name']);
+  $email = htmlspecialchars($_POST['email']);
+  $phone = htmlspecialchars($_POST['phone']);
+  $website = htmlspecialchars($_POST['website']);
+  $message = htmlspecialchars($_POST['message']);
+
+
+  if (!empty($email) && !empty($message)) {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Set sender
+        $mail->setFrom($email, $name);
+
+        // Add a recipient
+        $receiver = "dpheakdey.kh@gmail.com";
+        $mail->addAddress($receiver);
+
+        // Email subject and body
+        $mail->Subject = "From: $name <$email>";
+        $mail->Body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
+
+        // Send email
+        $mail->send();
+        echo 'Your message has been sent';
+    } else {
+      echo 'Enter a valid email address!';
     }
-  }else{
-    echo "Email and message field is required!";
-  }
-?>
+} else {
+    echo 'Email and message fields are required!';
+}
+} catch (Exception $e) {
+echo 'Sorry, failed to send your message!';
+}

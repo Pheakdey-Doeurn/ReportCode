@@ -45,7 +45,8 @@
 
 </head>
 
-<body id="bg" id="home">
+<body>
+
 	<div class="page-wraper">
 		<div id="loading-area"></div>
 		<!-- header -->
@@ -122,21 +123,21 @@
 
 								</a>
 							</div>
-							<div class="links">
+							
 								<ul class="nav navbar-nav">
-									<li class="has-mega-menu homedemo">
-										<a data-active="home" href="home.php">Home</a>
+									<li class="has-mega-menu homedemo <?php if($page=='home'){echo 'active';} ?>">
+										<a href="home.php">Home</a>
 									</li>
-									<li>
+									<li class=" <?php if($page=='about'){echo 'active';} ?>">
 										<a data-active="about" href="javascript:;">About Us<i class="fas fa-chevron-down"></i></a>
 										<ul class="sub-menu">
 											<li><a href="about.php">About</a></li>
 											<li><a href="organization.php">Organization</a></li>
 										</ul>
-									</li>
+									</li class=" <?php if($page=='donate'){echo 'active';} ?>">
 									<li> <a data-active="donate" href="donate.php">Donate</a>
 									</li>
-									<li>
+									<li class=" <?php if($page=='contact'){echo 'active';} ?>">
 										<a data-active="contact" href="contactus.php">Contact Us</a>
 									</li>
 
@@ -144,7 +145,7 @@
 										<a href="admin/login.php"><i class=""></i>Login</a>
 									</li>
 								</ul>
-							</div>
+							
 							<div class="dlab-social-icon">
 								<ul>
 									<li><a class="site-button facebook sharp-sm outline fab fa-facebook-f" href="javascript:void(0);"></a></li>

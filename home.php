@@ -1,4 +1,5 @@
 <?php
+	$page = 'home';
 	include 'homeheader.php';
     include 'sendmail.php'; 
 ?>
@@ -12,7 +13,7 @@
 
 </head>
 
-<body id="bg" id="home">
+<body id="bg">
 
 	<?php include 'slider.php' ?>
 	<?php include 'actionstudents.php' ?>

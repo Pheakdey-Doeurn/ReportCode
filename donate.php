@@ -1,4 +1,5 @@
-<?php include 'homeheader.php'; ?>
+<?php $page = 'donate'; include 'homeheader.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> TKBSS | Donate </title>
 </head>
-<body id="donate">
+<body>
     
 
 <?php include 'homefooter.php' ?>

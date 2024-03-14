@@ -1,4 +1,4 @@
-<?php include 'homeheader.php'; ?>
+<?php $page = 'about'; include 'homeheader.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +8,8 @@
 	<title> TKBSS | About Us</title>
 </head>
 
-<body id="bg" id="about">
-	<div class="page-content bg-white">
+<body>
+
 		<!-- inner page banner -->
 		<div class="dlab-bnr-inr overlay-black-middle bg-pt" style="background-image:url(images/banner/tkbss1.jpg);">
 			<div class="container">
