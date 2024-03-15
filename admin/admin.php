@@ -84,7 +84,7 @@
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
                             <div class="admin-title">
-                                <h5 class="item-title">Stevne Zone</h5>
+                                <h5 class="item-title"><?php echo $_SESSION["username"]; ?></h5>
                                 <span>Admin</span>
                             </div>
                             <div class="admin-img">
@@ -93,12 +93,11 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="item-header">
-                                <h6 class="item-title">Steven Zone</h6>
+                                <h6 class="item-title"> <?php echo $_SESSION["username"]; ?></h6>
                             </div>
                             <div class="item-content">
                                 <ul class="settings-list">
                                     <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
-                                    <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
                                     <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
                                     <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
                                     <li><a href="../login.php"><i class="flaticon-turn-off"></i>Log Out</a></li>

@@ -27,6 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION["role"] = $row["role"]; // Assuming your users table has a 'role' column
+        $_SESSION["username"] = $row["username"]; 
+
         switch ($_SESSION["role"]) {
             case 'admin':
                 header("Location: admin/admin.php");
