@@ -20,8 +20,7 @@ try {
 
   $name = htmlspecialchars($_POST['name']);
   $email = htmlspecialchars($_POST['email']);
-  $phone = htmlspecialchars($_POST['phone']);
-  $website = htmlspecialchars($_POST['website']);
+  $sub = htmlspecialchars($_POST['sub']);
   $message = htmlspecialchars($_POST['message']);
 
 
@@ -36,7 +35,7 @@ try {
 
         // Email subject and body
         $mail->Subject = "From: $name <$email>";
-        $mail->Body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $website\n\nMessage:\n$message\n\nRegards,\n$name";
+        $mail->Body = "Name: $name\nEmail: $email\nSubject: $sub\n\nMessage:\n$message\n\nRegards,\n$name";
 
         // Send email
         $mail->send();

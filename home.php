@@ -1,7 +1,6 @@
 <?php
 	$page = 'home';
 	include 'homeheader.php';
-    include 'sendmail.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
 <body id="bg">
 
 	<?php include 'slider.php' ?>
-	<?php include 'actionstudents.php' ?>
+	<!-- actionstudent -->
 
 	<!-- Content Section -->
 	<div class="section-full content-inner bg-white">
@@ -317,51 +316,74 @@
 		</div>
 	</div>
 	<!-- End Team Dev -->
-	<!-- Contact Us Section -->
-	<div class="contact-us">
-		<div class="container">
-			<!--alert messages start-->
-			<?php echo $alert; ?>
-   		    <!--alert messages end-->
-			<div class="row">
-				<div class="col-md-7">
-					<div class="section-title">
-						<h2 class="mt-2 text-md-center">ទាក់ទងតាមរយៈ</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-7">
-						<form class="mb-4 mb-lg-0" action="" method="POST">
-							<div class="form-row">
-								<div class="col-md-13 form-group">
-									<input type="text" name="name" class="txtname form-control" id="name" required placeholder="Name" />
-								</div>
-								<div class="col-md-13 form-group">
-									<input type="email" class="txtmessage form-control" name="email" required id="email" placeholder="Email" />
-								</div>
-							</div>
-							<div class="form-group">
-								<textarea class="form-control" name="message" required placeholder="Message" cols="7" rows="7"></textarea>
-							</div>
-							<button type="submit" name="send" class="btn btn-primary w-100">SEND</button>
-						</form>
-					</div>
-
-					<div class="col-lg-5">
-						<div class="map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.2705867517!2d103.09890569999999!3d13.2710238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311acb9357a7ead7%3A0xf55873dbb6c7075c!2sWat%20Kork%20Kdouch!5e0!3m2!1sen!2skh!4v1707232387025!5m2!1sen!2skh" width="100%" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0""></iframe>
-							</div>
-						</div>
-					</div>
-				</div>
-			  </div>
-			  <!-- == End Contact Us == -->
+	<div class="section-full content-inner contact-style-1">
+			<div class="container">
+                <div class="row">
+					<!-- Left part start -->
+                    <div class="col-lg-6 m-b30">
+                        <div class="p-a30 bg-white clearfix border-1 radius-sm">
+							<h3>Send Message Us</h3>
+							<div class="dzFormMsg"></div>
+							<form action="#">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group ">
+                                            <div class="input-group">
+												
+                                                <input name="name" type="text"  class="form-control" placeholder="Your Name">												
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group ">
+                                            <div class="input-group"> 
+											    <input name="email" type="email" class="form-control"   placeholder="Your Email" >
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="input-group ">
+                                                <input name="sub" type="text"  class="form-control" placeholder="Subject">
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <textarea name="message" rows="4" class="form-control"  placeholder="Your Message..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+									<div class="col-md-12">
+										<div class="form-group form-recaptcha">
+											<div class="input-group">
+												<div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+												<input class="form-control d-none" style="display:none;" data-recaptcha="true"  data-error="Please complete the Captcha">
+											</div>
+										</div>
+									</div>
+                                    <div class="col-md-12 button-area">
+										<span class="text-center "></span>
+                                        <button type="submit" class="site-button ">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Left part END -->
+					<!-- right part start -->
+                    <div class="col-lg-6 m-b30 d-flex">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.2705867517!2d103.09890569999999!3d13.2710238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311acb9357a7ead7%3A0xf55873dbb6c7075c!2sWat%20Kork%20Kdouch!5e0!3m2!1sen!2skh!4v1707232387025!5m2!1sen!2skh" class="align-self-stretch radius-sm" style="border:0; width:100%;  min-height:100%;" allowfullscreen></iframe>
+                    </div>
+                    <!-- right part END -->
+                </div>
+            </div>
+        </div>
+        <!-- contact area  END -->
 		<!-- Content -->
-		<script type="text/javascript">
-			if(window.history.replaceState){
-				window.history.replaceState(null, null, window.location.href);
-			}
-		</script>
+		<script src="js/script.js"></script>
+		<scrip src="js/jquery.min.js"></script>
 		<!-- Content END-->
 		<?php include 'homefooter.php' ?>
 

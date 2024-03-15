@@ -134,8 +134,8 @@
 											<li><a href="about.php">About</a></li>
 											<li><a href="organization.php">Organization</a></li>
 										</ul>
-									</li class=" <?php if($page=='donate'){echo 'active';} ?>">
-									<li> <a data-active="donate" href="donate.php">Donate</a>
+									</li>
+									<li  class=" <?php if($page=='donate'){echo 'active';} ?>"> <a data-active="donate" href="donate.php">Donate</a>
 									</li>
 									<li class=" <?php if($page=='contact'){echo 'active';} ?>">
 										<a data-active="contact" href="contactus.php">Contact Us</a>
