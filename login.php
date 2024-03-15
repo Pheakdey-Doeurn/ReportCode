@@ -8,23 +8,23 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="admin/image/x-icon" href="admin/img/favicon.png">
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="admin/css/normalize.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="admin/css/main.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="admin/css/bootstrap.min.css">
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="admin/css/all.min.css">
     <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="fonts/flaticon.css">
+    <link rel="stylesheet" href="admin/fonts/flaticon.css">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="admin/css/animate.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin/style.css">
     <!-- Modernize js -->
-    <script src="js/modernizr-3.6.0.min.js"></script>
+    <script src="admin/js/modernizr-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -36,18 +36,18 @@
         <div class="login-page-content">
             <div class="login-box">
                 <div class="item-logo">
-                    <img src="img/logo2.png" alt="logo">
+                    <img src="admin/img/logo2.png" alt="logo">
                 </div>
-                <form action="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index.html"
+                <form action="login_process.php" method="POST"
                     class="login-form">
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" placeholder="Enter usrename" class="form-control">
+                        <input type="text" placeholder="Enter usrename" required class="form-control">
                         <i class="far fa-envelope"></i>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="text" placeholder="Enter password" class="form-control">
+                        <input type="password" placeholder="Enter password" required class="form-control">
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="form-group">
@@ -60,17 +60,17 @@
     </div>
     <!-- Login Page End Here -->
     <!-- jquery-->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="admin/js/jquery-3.3.1.min.js"></script>
     <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
+    <script src="admin/js/plugins.js"></script>
     <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
+    <script src="admin/js/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="admin/js/bootstrap.min.js"></script>
     <!-- Scroll Up Js -->
-    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="admin/js/jquery.scrollUp.min.js"></script>
     <!-- Custom Js -->
-    <script src="js/main.js"></script>
+    <script src="admin/js/main.js"></script>
 
 </body>
 

@@ -6,23 +6,24 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../admin/css/normalize.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../admin/css/main.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../admin/css/bootstrap.min.css">
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="../admin/css/all.min.css">
     <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="fonts/flaticon.css">
+    <link rel="stylesheet" href="../admin/fonts/flaticon.css">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="../admin/css/animate.min.css">
     <!-- Data Table CSS -->
-    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../admin/css/jquery.dataTables.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../admin/style.css">
     <!-- Modernize js -->
-    <script src="js/modernizr-3.6.0.min.js"></script>
+    <script src="../admin/js/modernizr-3.6.0.min.js"></script>
+
 </head>
 <body>
 <div id="preloader"></div>
@@ -33,7 +34,7 @@
             <div class="nav-bar-header-one">
                 <div class="header-logo">
                     <a href="index.html">
-                        <img src="img/logo.png" alt="logo">
+                        <img src="../admin/img/logo.png" alt="logo">
                     </a>
                 </div>
                   <div class="toggle-button sidebar-toggle">
@@ -238,7 +239,7 @@
                </div>
                 <div class="sidebar-menu-content">
                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
-                        <li class="nav-item sidebar-nav-item">
+                        <li class="active nav-item">
                             <a href="teacher_dashboard.php" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
                         </li>
                         <li class="nav-item sidebar-nav-item">

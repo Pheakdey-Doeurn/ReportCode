@@ -142,7 +142,7 @@
 									</li>
 
 									<li>
-										<a href="admin/login.php"><i class=""></i>Login</a>
+										<a href="login.php"><i class=""></i>Login</a>
 									</li>
 								</ul>
 							
