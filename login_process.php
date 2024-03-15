@@ -1,9 +1,17 @@
 <?php
  session_start();
-
-// Database connection parameters
-require 'config/config.php';
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+ $host = 'localhost';
+ $username = 'root';
+ $password = '';
+ $database = 'schooldb';
+ 
+ // Connect to MySQL
+ $conn = mysqli_connect($host, $username, $password, $database);
+ 
+ // Check connection
+ if (!$conn) {
+     die("Connection failed: " . mysqli_connect_error());
+ }
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,13 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["role"] = $row["role"]; // Assuming your users table has a 'role' column
         switch ($_SESSION["role"]) {
             case 'admin':
-                header("Location: admin.php");
+                header("Location: admin/admin.php");
                 break;
             case 'student':
-                header("Location: student_dashboard.php");
+                header("Location: students/student_dashboard.php");
                 break;
             case 'teacher':
-                header("Location: teacher_dashboard.php");
+                header("Location: teacher/teacher_dashboard.php");
                 break;
             default:
                 // Redirect back to login page with error if role is not recognized

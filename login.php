@@ -38,20 +38,20 @@
                 <div class="item-logo">
                     <img src="admin/img/logo2.png" alt="logo">
                 </div>
-                <form action="login_process.php" method="POST"
+                <form action="login_process.php" method="post"
                     class="login-form">
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" placeholder="Enter usrename" required class="form-control">
+                        <input type="text" name="username" placeholder="Enter usrename" required class="form-control">
                         <i class="far fa-envelope"></i>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" placeholder="Enter password" required class="form-control">
+                        <input type="password" name="password" placeholder="Enter password" required class="form-control">
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="login-btn">Login</button>
+                        <button type="submit" value="Login" class="login-btn">Login</button>
                     </div>
                 </form>
                 
