@@ -13,6 +13,7 @@ include 'header.php';
 </head>
 
 <body>
+
     <!-- Sidebar Area End Here -->
     <div class="dashboard-content-one">
         <!-- Breadcubs Area Start Here -->
@@ -104,8 +105,8 @@ include 'header.php';
                             </div>
 
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                Add User Admin
+                            <button type="button" class="btn btn-primary text-light bg-dodger-white shadow" data-toggle="modal" data-target="#exampleModal" style="font-size: 1.5rem;">
+                                <i class="fas fa-plus"></i> Add User Admin
                             </button>
 
                         </div>
@@ -165,38 +166,135 @@ include 'header.php';
                     </div>
                 </div>
             </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="font-size: 1.5rem;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add User Admin</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <div class="text text-center">
+                                        <label style="font-size: 20px;">Profile Admin</label>
+                                    </div>
+                                    <div class="item-img text-center">
+                                        <img src="img/figure/user.jpg" alt="user" style="width: 200px; height: 200px; border: 2px solid #ccc; margin-bottom: 20px; overflow: hidden;">
+                                    </div>
+                                    <div class="text-center">
+                                        <label for="file-upload" class="btn btn-primary" style="font-size: 1.5rem;"><i class="fas fa-cloud-upload-alt mg-l-10"></i> Upload Photo</label>
+                                        <input id="file-upload" type="file" style="display: none;">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="usertype">User Type</label>
+                                    <input type="text" class="form-control" id="usertype" placeholder="User Type">
+                                </div>
+                                <div class="form-group">
+                                    <label class="label" for="gender"> Gender</label>
+                                    <div class="radio-inline" style="display: flex; justify-content:space-between;">
+                                        <div class="radio"  style="flex-grow: 1;">
+                                            <input type="radio" name="Gender" value="Male" checked="checked" id="Male">
+                                            <label for="Male">Male</label>
+                                        </div>
+                                        <div class="radio" style="flex-grow: 1;">
+                                            <input type="radio" name="Gender" value="Female" id="Female" style="text-align: center;">
+                                            <label for="Female">Female</label>
+                                        </div>
+                                        <div class="radio"  style="flex-grow: 1;">
+                                            <input type="radio" name="Gender" value="other" id="other">
+                                            <label for="other">Other</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">Date Of Birth</label>
+                                    <input type="date" class="form-control" id="dob">
+                                </div>
+                                <div class="form-group">
+                                    <label for="jod">Joining Date</label>
+                                    <input type="date" class="form-control" id="job">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="address" class="form-control" id="address" placeholder="Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password" placeholder="Password">
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn radius-8 text-light bg-martini shadow-martini" id="show-password">Show</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-pass">Confirm Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="confirm-pass" placeholder="Confirm Password">
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn radius-8 text-light bg-martini shadow-martini" id="show-confirm-password">Show</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary " style="font-size: 1.5rem;" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" style="font-size: 1.5rem;"> Save </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal -->
         </div>
         <!-- Account Settings Area End Here -->
 
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document" style="font-size: 1.5rem;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add User Admin</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary " data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <?php include 'footer.php'; ?>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#show-password").click(function() {
+                    var passwordField = $("#password");
+                    var passwordFieldType = passwordField.attr('type');
+                    if (passwordFieldType == 'password') {
+                        passwordField.attr('type', 'text');
+                        $(this).text('Hide');
+                    } else {
+                        passwordField.attr('type', 'password');
+                        $(this).text('Show');
+                    }
+                });
+
+                $("#show-confirm-password").click(function() {
+                    var confirmPasswordField = $("#confirm-pass");
+                    var confirmPasswordFieldType = confirmPasswordField.attr('type');
+                    if (confirmPasswordFieldType == 'password') {
+                        confirmPasswordField.attr('type', 'text');
+                        $(this).text('Hide');
+                    } else {
+                        confirmPasswordField.attr('type', 'password');
+                        $(this).text('Show');
+                    }
+                });
+            });
+        </script>
+
 </body>
 
 </html>

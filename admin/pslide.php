@@ -108,12 +108,12 @@ include 'header.php';
                             <h3>Add ImageSlide</h3>
                         </div>
                     </div>
-                    <form method="POST" action="" enctype="multipart/form-data">
+                    <form action="#" method="POST" action="" enctype="multipart/form-data">
                         <div class="col-lg-12 form-group mg-t-10">
                             <input type="file" name="image" class="form-control" required multiple>
                         </div>
                         <div class="btn">
-                            <button type="button" class="btn-fill-lmd radius-30 text-light bg-true-v" name="upload">Upload Image<i class="fas fa-cloud-upload-alt mg-l-10"></i></button>
+                            <button type="button" class="btn-fill-lmd radius-30 text-light bg-true-v" name="upload" style="font-size: 1.5rem;">Upload Image</button>
                         </div>
                     </form>
                 </div>
