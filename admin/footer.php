@@ -33,3 +33,5 @@
           <script src="js/datepicker.min.js"></script>
           <!-- Select 2 Js -->
           <script src="js/select2.min.js"></script>
+          <!-- Data Table Js -->
+          <script src="js/jquery.dataTables.min.js"></script>

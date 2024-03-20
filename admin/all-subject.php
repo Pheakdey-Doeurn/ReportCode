@@ -6,31 +6,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TKBSS | Class Routine</title>
+    <title>TKBSS | Subject</title>
+
 </head>
 
 <body>
+
     <!-- Sidebar Area End Here -->
     <div class="dashboard-content-one">
         <!-- Breadcubs Area Start Here -->
         <div class="breadcrumbs-area">
-            <h3>Class Routine</h3>
+            <h3>All Subjects</h3>
             <ul>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
-                <li>Routine</li>
+                <li>Subjects</li>
             </ul>
         </div>
         <!-- Breadcubs Area End Here -->
-        <!-- Class Routine Area Start Here -->
+        <!-- All Subjects Area Start Here -->
         <div class="row">
             <div class="col-4-xxxl col-12">
                 <div class="card height-auto">
                     <div class="card-body">
                         <div class="heading-layout1">
                             <div class="item-title">
-                                <h3>Add Class Routine</h3>
+                                <h3>Add New Subject</h3>
                             </div>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">...</a>
@@ -95,7 +97,7 @@
                     <div class="card-body">
                         <div class="heading-layout1">
                             <div class="item-title">
-                                <h3>Class Routine</h3>
+                                <h3>All Subjects</h3>
                             </div>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">...</a>
@@ -110,13 +112,13 @@
                         <form class="mg-b-20">
                             <div class="row gutters-8">
                                 <div class="col-lg-4 col-12 form-group">
-                                    <input type="text" placeholder="Search by Day ..." class="form-control">
+                                    <input type="text" placeholder="Search by Exam ..." class="form-control">
                                 </div>
                                 <div class="col-lg-3 col-12 form-group">
-                                    <input type="text" placeholder="Search by Class ..." class="form-control">
+                                    <input type="text" placeholder="Search by Subject ..." class="form-control">
                                 </div>
                                 <div class="col-lg-3 col-12 form-group">
-                                    <input type="text" placeholder="Search by Section ..." class="form-control">
+                                    <input type="text" placeholder="dd/mm/yyyy" class="form-control">
                                 </div>
                                 <div class="col-lg-2 col-12 form-group">
                                     <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
@@ -130,14 +132,12 @@
                                         <th>
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input checkAll">
-                                                <label class="form-check-label">Day</label>
+                                                <label class="form-check-label">ID</label>
                                             </div>
                                         </th>
+                                        <th>Subject Name</th>
+                                        <th>Subject Type</th>
                                         <th>Class</th>
-                                        <th>Subject</th>
-                                        <th>Section</th>
-                                        <th>Teacher</th>
-                                        <th>Time</th>
                                         <th>Date</th>
                                         <th></th>
                                     </tr>
@@ -147,15 +147,13 @@
                                         <td>
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">Sunday</label>
+                                                <label class="form-check-label">#0021</label>
                                             </div>
                                         </td>
-                                        <td>4</td>
                                         <td>Accounting</td>
-                                        <td>A</td>
-                                        <td>Mike John</td>
-                                        <td>10.00 am-11.00 am</td>
-                                        <td>20/06/2019</td>
+                                        <td>Mathematics</td>
+                                        <td>4</td>
+                                        <td>02/05/2001</td>
                                         <td>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -173,15 +171,37 @@
                                         <td>
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">Monday</label>
+                                                <label class="form-check-label">#0022</label>
                                             </div>
                                         </td>
-                                        <td>4</td>
+                                        <td>Bangla</td>
+                                        <td>Theory</td>
+                                        <td>6</td>
+                                        <td>02/05/2001</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <span class="flaticon-more-button-of-three-dots"></span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">#0023</label>
+                                            </div>
+                                        </td>
                                         <td>English</td>
-                                        <td>A</td>
-                                        <td>Adam John</td>
-                                        <td>10.00 am-11.00 am</td>
-                                        <td>20/06/2019</td>
+                                        <td>Theory</td>
+                                        <td>7</td>
+                                        <td>02/05/2001</td>
                                         <td>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -199,15 +219,61 @@
                                         <td>
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">Tuesday</label>
+                                                <label class="form-check-label">#0024</label>
                                             </div>
                                         </td>
-                                        <td>4</td>
+                                        <td>Arts</td>
+                                        <td>Theory</td>
+                                        <td>6</td>
+                                        <td>02/05/2001</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <span class="flaticon-more-button-of-three-dots"></span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">#0025</label>
+                                            </div>
+                                        </td>
+                                        <td>Finanace</td>
+                                        <td>Theory</td>
+                                        <td>6</td>
+                                        <td>02/05/2001</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <span class="flaticon-more-button-of-three-dots"></span>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
+                                                    <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">#0026</label>
+                                            </div>
+                                        </td>
                                         <td>Economics</td>
-                                        <td>A</td>
-                                        <td>Johanthon Ray</td>
-                                        <td>10.00 am-11.00 am</td>
-                                        <td>20/06/2019</td>
+                                        <td>Theory</td>
+                                        <td>6</td>
+                                        <td>02/05/2001</td>
                                         <td>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -225,41 +291,13 @@
                                         <td>
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">Wednesday</label>
+                                                <label class="form-check-label">#0027</label>
                                             </div>
                                         </td>
-                                        <td>4</td>
-                                        <td>Drawing</td>
-                                        <td>A</td>
-                                        <td>Mike Jonas</td>
-                                        <td>10.00 am-11.00 am</td>
-                                        <td>20/06/2019</td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                    <span class="flaticon-more-button-of-three-dots"></span>
-                                                </a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
-                                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                                    <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">Thursday</label>
-                                            </div>
-                                        </td>
-                                        <td>4</td>
                                         <td>English</td>
-                                        <td>A</td>
-                                        <td>Kate Well</td>
-                                        <td>10.00 am-11.00 am</td>
-                                        <td>20/06/2019</td>
+                                        <td>Theory</td>
+                                        <td>6</td>
+                                        <td>02/05/2001</td>
                                         <td>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -277,41 +315,13 @@
                                         <td>
                                             <div class="form-check">
                                                 <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">Friday</label>
+                                                <label class="form-check-label">#0028</label>
                                             </div>
                                         </td>
-                                        <td>4</td>
-                                        <td>Chemistry</td>
-                                        <td>A</td>
-                                        <td>Mike John</td>
-                                        <td>10.00 am-11.00 am</td>
-                                        <td>20/06/2019</td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                    <span class="flaticon-more-button-of-three-dots"></span>
-                                                </a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#"><i class="fas fa-times text-orange-red"></i>Close</a>
-                                                    <a class="dropdown-item" href="#"><i class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
-                                                    <a class="dropdown-item" href="#"><i class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input">
-                                                <label class="form-check-label">Saturday</label>
-                                            </div>
-                                        </td>
-                                        <td>4</td>
-                                        <td>English</td>
-                                        <td>A</td>
-                                        <td>Mike John</td>
-                                        <td>10.00 am-11.00 am</td>
-                                        <td>20/06/2019</td>
+                                        <td>Bangla</td>
+                                        <td>Theory</td>
+                                        <td>6</td>
+                                        <td>02/05/2001</td>
                                         <td>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -332,9 +342,11 @@
                 </div>
             </div>
         </div>
-        <!-- Class Routine Area End Here -->
+        <!-- All Subjects Area End Here -->
 
 
+        <!-- Data Table Js -->
+        <script src="js/jquery.dataTables.min.js"></script>
 
         <?php include 'footer.php'; ?>
 </body>

@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="css/fullcalendar.min.css">
     <!-- Date Picker CSS -->
     <link rel="stylesheet" href="css/datepicker.min.css">
+    <!-- Data Table CSS -->
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+     <!-- Data Table CSS -->
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <!-- Select 2 CSS -->
     <link rel="stylesheet" href="css/select2.min.css">
     <!-- Animate CSS -->
@@ -312,7 +316,7 @@
                             <a href="all-subject.php" class="nav-link <?= $page == 'all-subject.php' ? 'menu-active' : '' ?>"><i class="flaticon-open-book"></i><span>Subject</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="class-routine.php" class="nav-link"><i class="flaticon-calendar"></i><span>Class
+                            <a href="class-routine.php" class="nav-link <?= $page == 'class-routine.php' ? 'menu-active' : '' ?>"><i class="flaticon-calendar"></i><span>Class
                                     Routine</span></a>
                         </li>
                         <li class="nav-item">
@@ -335,7 +339,7 @@
                             <a href="notice-board.php" class="nav-link <?= $page == 'notice-board.php' ? 'menu-active' : '' ?>"><i class="flaticon-script"></i><span>Notice</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="messaging.php" class="nav-link"><i class="flaticon-chat"></i><span>Messeage</span></a>
+                            <a href="messaging.php" class="nav-link <?= $page == 'messaging.php' ? 'menu-active' : '' ?>"><i class="flaticon-chat"></i><span>Message</span></a>
                         </li>
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link "><i class="flaticon-settings"></i><span>Account</span></a>
