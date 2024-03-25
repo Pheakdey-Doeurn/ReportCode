@@ -14,8 +14,8 @@ include 'header.php';
     <link rel="stylesheet" href="css/select2.min.css">
     <!-- Date Picker CSS -->
     <link rel="stylesheet" href="css/datepicker.min.css">
-     <!-- Custom CSS -->
-     <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
     <!-- Modernize js -->
     <script src="js/modernizr-3.6.0.min.js"></script>
 </head>
@@ -125,10 +125,15 @@ include 'header.php';
                             <label>Phone</label>
                             <input type="text" placeholder="" class="form-control">
                         </div>
-                        <div class="col-lg-6 col-12 form-group mg-t-30">
-                            <label class="text-dark-medium">Upload Teacher Photo (150px X 150px)</label>
-                            <input type="file" class="form-control-file">
+                        <div class="item-img col-xl-3 col-lg-8 col-12 text-center form-group">
+                            <img src="img/figure/user.jpg" alt="user" style="width: 200px; height: 200px; border: 2px solid #ccc; margin-bottom: 20px; overflow: hidden;">
+                            <label for="file-upload" class="btn btn-primary" style="font-size: 1.5rem;"> <!--<i class="fas fa-cloud-upload-alt mg-l-10"></i> --> Upload Photo</label>
+                            <input id="file-upload" type="file" style="display: none;">
                         </div>
+                        <!-- <div class="col-xl-6 col-lg-6 text-center ">
+                            <label for="file-upload" class="btn btn-primary" style="font-size: 1.5rem;"><i class="fas fa-cloud-upload-alt mg-l-10"></i> Upload Photo</label>
+                            <input id="file-upload" type="file" style="display: none;">
+                        </div> -->
                         <div class="col-12 form-group mg-t-8">
                             <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
                             <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>

@@ -344,10 +344,6 @@
         </div>
         <!-- All Subjects Area End Here -->
 
-
-        <!-- Data Table Js -->
-        <script src="js/jquery.dataTables.min.js"></script>
-
         <?php include 'footer.php'; ?>
 </body>
 
