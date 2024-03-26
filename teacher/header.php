@@ -228,6 +228,7 @@
             </div>
         </div>
         <!-- Header Menu Area End Here -->
+        <?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], "/") + 1); ?> <!-- Active Menu -->
         <!-- Page Area Start Here -->
         <div class="dashboard-page-one">
             <!-- Sidebar Area Start Here -->
@@ -240,33 +241,33 @@
                 <div class="sidebar-menu-content">
                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
                         <li class="active nav-item">
-                            <a href="teacher_dashboard.php" class="nav-link"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
+                            <a href="teacher_dashboard.php" class="nav-link  <?= $page == 'teacher_dashboard.php' ? 'menu-active' : '' ?>"><i class="flaticon-dashboard"></i><span>Dashboard</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="all_students.php" class="nav-link"><i class="flaticon-classmates"></i><span>Students</span></a>
+                            <a href="all_students.php" class="nav-link  <?= $page == 'all_students.php' ? 'menu-active' : '' ?>"><i class="flaticon-classmates"></i><span>Students</span></a>
         
                         
                         </li>
                         <li class="nav-item ">
-                            <a href="all_teacher.php" class="nav-link"><i class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
+                            <a href="all_teacher.php" class="nav-link  <?= $page == 'all_teacher.php' ? 'menu-active' : '' ?>"><i class="flaticon-multiple-users-silhouette"></i><span>Teachers</span></a>
         
                         </li>
                        
               
                         <li class="nav-item ">
-                            <a href="class.php" class="nav-link"><i class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Class</span></a>                
+                            <a href="class.php" class="nav-link  <?= $page == 'class.php' ? 'menu-active' : '' ?>"><i class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Class</span></a>                
                         </li>
                         <li class="nav-item">
-                            <a href="all-subject.php" class="nav-link"><i class="flaticon-open-book"></i><span>Subject</span></a>
+                            <a href="all-subject.php" class="nav-link <?= $page == 'all-subject.php' ? 'menu-active' : '' ?>"><i class="flaticon-open-book"></i><span>Subject</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="class-routine.php" class="nav-link"><i class="flaticon-calendar"></i><span>Class Routine</span></a>
+                            <a href="class-routine.php" class="nav-link <?= $page == 'class-routine.php' ? 'menu-active' : '' ?>"><i class="flaticon-calendar"></i><span>Class Routine</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="student_att.php" class="nav-link"><i class="flaticon-checklist"></i><span>Attendence</span></a>
+                            <a href="student_att.php" class="nav-link <?= $page == 'student_att.php' ? 'menu-active' : '' ?>"><i class="flaticon-checklist"></i><span>Attendence</span></a>
                         </li>
                         <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
+                            <a href="#" class="nav-link  <?= $page == 'schedule.php' || $page == 'grade.php' || $page == 'score.php' ? 'menu-active' : '' ?>"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
                                     <a href="schedule.php" class="nav-link"><i class="fas fa-angle-right"></i> Schedule</a>
@@ -283,10 +284,10 @@
                             <a href="notice-board.php" class="nav-link"><i class="flaticon-script"></i><span>Notice</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="messaging.php" class="nav-link"><i class="flaticon-chat"></i><span>Messeage</span></a>
+                            <a href="messaging.php" class="nav-link <?= $page == 'messaging.php' ? 'menu-active' : '' ?>"><i class="flaticon-chat"></i><span>Messeage</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="account-settings.php" class="nav-link"><i class="flaticon-settings"></i><span>Account</span></a>
+                            <a href="account-settings.php" class="nav-link <?= $page == 'account-settings.php' ? 'menu-active' : '' ?>"><i class="flaticon-settings"></i><span>Account</span></a>
                         </li>
                     </ul>
                 </div>

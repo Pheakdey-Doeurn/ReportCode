@@ -1,8 +1,10 @@
+<?php
+$current_year = date("Y");
+?>
 <!-- Footer Area Start Here -->
 <footer class="footer-wrap-layout1">
-                    <div class="copyright">© Copyrights <a href="#">akkhor</a> 2019. All rights reserved. Designed by <a
-                            href="#">PsdBosS</a></div>
-                </footer>
+    <div class="copyright">© Copyrights <a href="#">TKBSS</a> 2023-<?php echo $current_year; ?>. All rights reserved. Designed by <a href="#">TKBSS</a></div>
+</footer>
                 <!-- Footer Area End Here -->
             </div>
         </div>
