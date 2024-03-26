@@ -319,11 +319,17 @@
                             <a href="class-routine.php" class="nav-link <?= $page == 'class-routine.php' ? 'menu-active' : '' ?>"><i class="flaticon-calendar"></i><span>Class
                                     Routine</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a href="student-attendence.php" class="nav-link  <?= $page == 'student-attendence.php' ? 'menu-active' : '' ?>"><i class="flaticon-checklist"></i><span>Attendence</span></a>
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="student-attendence.php" class="nav-link  <?= $page == 'student-attendence.php' || $page == 'teacher_attendance.php' || $page == 'student_attendance.php' ? 'menu-active' : '' ?>"><i class="flaticon-checklist"></i><span>Attendence</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item"><a href="teacher_attendance.php" class="nav-link <?= $page == 'teacher_attendance.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Teachers Attendence
+                                        </a></li>
+                                <li class="nav-item"><a href="student_attendance.php" class="nav-link <?= $page == 'student_attendance.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Students Attendence
+                                        </a></li>
+                            </ul>
                         </li>
                         <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link <?= $page == 'exam-schedule.php' || $page == 'exam-grade.php' ? 'menu-active' : '' ?>"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
+                            <a href="#" class="nav-link <?= $page == 'exam-schedule.php' || $page == 'exam-grade.php' || $page == 'exam-result.php' ? 'menu-active' : '' ?>"><i class="flaticon-shopping-list"></i><span>Exam</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
                                     <a href="exam-schedule.php" class="nav-link <?= $page == 'exam-schedule.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Exam
@@ -332,6 +338,10 @@
                                 <li class="nav-item">
                                     <a href="exam-grade.php" class="nav-link <?= $page == 'exam-grade.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Exam
                                         Grades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="exam-result.php" class="nav-link <?= $page == 'exam-result.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Exam
+                                        Result</a>
                                 </li>
                             </ul>
                         </li>
