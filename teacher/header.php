@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="../admin/css/normalize.css">
     <!-- Main CSS -->
@@ -33,7 +34,7 @@
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one">
                 <div class="header-logo">
-                    <a href="index.html">
+                    <a href="teacher_dashboard.php">
                         <img src="../admin/img/logo.png" alt="logo">
                     </a>
                 </div>
