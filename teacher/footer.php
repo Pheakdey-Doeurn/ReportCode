@@ -30,3 +30,5 @@ $current_year = date("Y");
     <script src="../admin/js/Chart.min.js"></script>
     <!-- Custom Js -->
     <script src="../admin/js/main.js"></script>
+    <!-- Select 2 Js -->
+    <script src="js/select2.min.js"></script>

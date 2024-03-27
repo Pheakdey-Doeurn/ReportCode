@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="css/select2.min.css">
     <!-- Modernize js -->
     <script src="js/modernizr-3.6.0.min.js"></script>
 
