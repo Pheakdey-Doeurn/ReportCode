@@ -16,7 +16,7 @@
 
 	<?php include 'slider.php' ?>
 	<!-- actionstudent -->
-
+	<?php include 'actionstudents.php'?>
 	<!-- Content Section -->
 	<div class="section-full content-inner bg-white">
 		<div class="container">

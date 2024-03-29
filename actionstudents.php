@@ -39,8 +39,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
-							<div class="sort-title clearfix text-center">
-								<h4>Portfolio Carousel no margin</h4>
+							<div class="sort-title clearfix text-center" >
+								<h4 style="font-family: 'Moul';">សកម្មភាពទូទៅរបស់សមណៈសិស្ស</h4>
 							</div>
 							<!-- Portfolio Carousel with no margin -->
 							<div class="section-content box-sort-in m-b30 button-example">
@@ -140,7 +140,6 @@
 	<!-- JAVASCRIPT FILES ========================================= -->
 	<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
 	<script src="plugins/wow/wow.js"></script><!-- WOW JS -->
-
 	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 	<script src="plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
 	<script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
