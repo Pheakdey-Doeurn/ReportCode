@@ -41,37 +41,56 @@ include 'header.php';
 
 <body>
     <?php
+    // Checking if the form has been submitted
     if (isset($_POST['upload'])) {
-        $folder = 'Imageslide/';
-        $image_file = $_FILES['image']['name'];  //Image Name
-        $file = $_FILES["image"]["tmp_name"]; //Temporary file name stored in a variable
+        $folder = 'Imageslide/'; // Folder where the images will be stored
+        $image_file = $_FILES['image']['name']; // Name of the uploaded image file
+        $file = $_FILES["image"]["tmp_name"]; // Temporary file name stored in a variable
 
-        $path = $_FILES["image"]["name"];     //Name of the file on the server
-        $target_file = $folder . basename($image_file);   //Creating
-        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION); //Targeting the image type
+        $path = $_FILES["image"]["name"]; // Name of the file on the server
+        $target_file = $folder . basename($image_file); // Target file path
 
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION); // Extracting the file extension
+
+        // Validating file type
         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
             $error[] = 'Sorry, Only JPG, JPEG, PNG File are allowed';
         }
-        if ($_FILES['image']['size'] > 1048576) {
+
+        // Validating file size
+        if ($_FILES['image']['size'] > 1048576) { // 1 MB in bytes
             $error[] = 'Sorry, your file is too large. Upload less than 1 MB';
         }
+
+        // Check if the image already exists in the database
+        $existing_image_query = mysqli_query($conn, "SELECT COUNT(*) AS count FROM pageslide WHERE image='$image_file'");
+        $existing_image_result = mysqli_fetch_assoc($existing_image_query);
+        if ($existing_image_result['count'] > 0) {
+            $error[] = 'This image has already been uploaded';
+        }
+
+        // If no errors, proceed with upload
         if (!isset($error)) {
-            move_uploaded_file($file, $target_file);
+            move_uploaded_file($file, $target_file); // Moving the uploaded file to its destination
+            // Inserting image information into the database
             $result = mysqli_query($conn, "INSERT INTO pageslide(image) VALUES('$image_file')");
             if ($result) {
-                $image_success = 1;
+                $image_success = 1; // Flag to indicate successful upload
             } else {
-                echo 'Something went wrong';
+                echo 'Something went wrong'; // Error message if insertion fails
             }
         }
+
+        // If there are errors, display them
         if (isset($error)) {
             foreach ($error as $error) {
-                echo '<div class="message">' . $error . '</div>';
+                echo '<div class="message">' . $error . '</div>'; // Displaying error messages
             }
         }
     }
     ?>
+
+
 
     <div class="dashboard-content-one">
         <!-- Dashboard summery Start Here -->
@@ -110,10 +129,10 @@ include 'header.php';
                     </div>
                     <form action="#" method="POST" action="" enctype="multipart/form-data">
                         <div class="col-lg-12 form-group mg-t-10">
-                            <input type="file" name="image" class="form-control" required multiple>
+                            <input type="file" name="image" class="form-control" required>
                         </div>
                         <div class="btn">
-                            <button type="button" class="btn-fill-lmd radius-30 text-light bg-true-v" name="upload" style="font-size: 1.5rem;">Upload Image</button>
+                            <button type="submit" class="btn-fill-lmd radius-30 text-light bg-true-v" name="upload" style="font-size: 1.5rem;">Upload Image</button>
                         </div>
                     </form>
                 </div>
@@ -143,7 +162,8 @@ include 'header.php';
                                        <td><img src="Imageslide/' . $row['image'] . '" width="300" height="100"> </td>
                                        <td>
                                        <a href=\'slideDelete.php?id=' . $row['id'] . '\' onClick=\'return confirm("Are you sure you want to delete?")\'">
-                                       <button class="btn-primary btn_del text-center">Delete</button></
+                                        <button class="btn-primary btn_del text-center">Delete</button> 
+                                        </a>
                                        </td>
                                        </tr>';
                             }
