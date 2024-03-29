@@ -16,12 +16,26 @@
 
     function alertMessage(){
         if(isset($_SESSION['status'])){
-            echo   '<div class="alert alert-success">
-            <h3>'.$_SESSION['status'].'</h3>
-            </div>';
-            unset($_SESSION['status']);
+            echo '<div class="alert alert-success">
+                      <h3>'.$_SESSION['status'].'</h3>
+                  </div>';
+            unset($_SESSION['status']); // Clears the session variable after displaying the message
         }
+        if(isset($_SESSION['error'])){
+            echo '<div class="alert alert-danger">
+                      <h3>'.$_SESSION['error'].'</h3>
+                  </div>';
+            unset($_SESSION['error']); // Clears the session variable after displaying the message
+        }
+        if(isset($_SESSION['duplicate'])){
+            echo '<div class="alert alert-danger">
+                      <h3>This image has already been uploaded</h3>
+                  </div>';
+            unset($_SESSION['duplicate']); // Clears the session variable after displaying the message
+        }
+       
     }
+    
 
     function checkParamId($paramType){
         if(isset($_GET[$paramType])){

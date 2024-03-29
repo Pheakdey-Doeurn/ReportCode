@@ -81,11 +81,8 @@ include 'header.php';
             }
         }
 
-        // If there are errors, display them
-        if (isset($error)) {
-            foreach ($error as $error) {
-                echo '<div class="message">' . $error . '</div>'; // Displaying error messages
-            }
+        if ($existing_image_result['count'] > 0) {
+            $_SESSION['duplicate'] = true;
         }
     }
     ?>
@@ -107,21 +104,7 @@ include 'header.php';
             </div>
             <div class="card height-auto">
                 <div class="card-body">
-                    <?php if (isset($image_success)) {
-                        echo '<div class="success">Image Uploaded Seccessfully</div><br>';
-                    } ?>
-                    <?php if (isset($_GET['deleted'])) {
-                    ?>
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>Image Daleted Seccessfully!</strong>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    <?php
-                        unset($_GET['deleted']);
-                    }
-                    ?>
+                   <?= alertMessage(); ?>
                     <div class="heading-layout1">
                         <div class="item-title">
                             <h3>Add ImageSlide</h3>
