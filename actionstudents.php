@@ -34,52 +34,108 @@
 </head>
 
 <body id="bg">
-	<div class="page-wraper">
-		<div id="loading-area"></div>
-		<!-- Content -->
-		<div class="page-content bg-gray">
-			<!-- contact area -->
-			<div class="content-block">
-				<!-- Portfolio  -->
-				<div class="section-full content-inner portfolio bg-gray" id="portfolio">
-					<div class="container">
-						<div class="section-head kinder-head text-center">
-							<h2 class="head-title text-primary">Gallery of our classes</h2>
-							<p>We provide three classes with nine to twenty children each aged twelve months to six years of age.</p>
-						</div>
-						<div class="clearfix" id="lightgallery">
-							<ul id="masonry" class=" portfolio-ic row dlab-gallery-listing gallery-grid-4 gallery lightgallery">
-								<li class="web design card-container col-lg-3 col-md-6 col-sm-6">
-									<div class="dlab-box dlab-gallery-box">
-										<div class="dlab-media dlab-img-overlay1 dlab-img-effect">
-											<a href="javascript:void(0);"> <img src="images/portfolio/image_1.jpg" alt=""> </a>
-											<div class="overlay-bx">
-												<div class="overlay-icon">
-													<div class="text-white">
-														<a href="javascript:void(0);"><i class="fas fa-link icon-bx-xs"></i></a>
-														<span data-exthumbimage="images/portfolio/image_1.jpg" data-src="images/portfolio/image_1.jpg" class="check-km" title="School Library">
-															<i class="far fa-image icon-bx-xs"></i>
+<div class="dlab-divider bg-gray-dark tb10"></div>
+			<div class="section-full bg-white content-inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="sort-title clearfix text-center">
+								<h4>Portfolio Carousel no margin</h4>
+							</div>
+							<!-- Portfolio Carousel with no margin -->
+							<div class="section-content box-sort-in m-b30 button-example">
+								<div class="portfolio-carousel-nogap owl-loaded owl-theme owl-carousel mfp-gallery gallery owl-btn-center-lr owl-btn-1">
+									<div class="item">
+										<div class="ow-portfolio">
+											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic1.jpg" alt="">
+												<div class="overlay-bx">
+													<div class="overlay-icon"> 
+														<span data-exthumbimage="images/our-work/pic1.jpg" data-src="images/our-work/pic1.jpg" class="check-km" title="Image 1 Title will come here">		
+															<i class="fas fa-search-plus icon-bx-xs"></i> 
 														</span>
+														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a> 
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="dez-info bg-white">
-											<h6 class="dez-title m-t0"><a href="javascript:void(0);">School Library</a></h6>
-											<p class="category"><small>Library</small></p>
+									</div>
+									<div class="item">
+										<div class="ow-portfolio">
+											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic2.jpg" alt="">
+												<div class="overlay-bx">
+													<div class="overlay-icon"> 
+														<span data-exthumbimage="images/our-work/pic2.jpg" data-src="images/our-work/pic2.jpg" class="check-km" title="Image 2 Title will come here">		
+															<i class="fas fa-search-plus icon-bx-xs"></i> 
+														</span> 
+														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a> 
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
-								</li>
-
-							</ul>
+									<div class="item">
+										<div class="ow-portfolio">
+											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic3.jpg" alt="">
+												<div class="overlay-bx">
+													<div class="overlay-icon"> 
+														<span data-exthumbimage="images/our-work/pic3.jpg" data-src="images/our-work/pic3.jpg" class="check-km" title="Image 3 Title will come here">		
+															<i class="fas fa-search-plus icon-bx-xs"></i> 
+														</span>  
+														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a>  
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="ow-portfolio">
+											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic4.jpg" alt="">
+												<div class="overlay-bx">
+													<div class="overlay-icon"> 
+														<span data-exthumbimage="images/our-work/pic4.jpg" data-src="images/our-work/pic4.jpg" class="check-km" title="Image 4 Title will come here">		
+															<i class="fas fa-search-plus icon-bx-xs"></i> 
+														</span> 
+														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="ow-portfolio">
+											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic5.jpg" alt="">
+												<div class="overlay-bx">
+													<div class="overlay-icon"> 
+														<span data-exthumbimage="images/our-work/pic5.jpg" data-src="images/our-work/pic5.jpg" class="check-km" title="Image 5 Title will come here">		
+															<i class="fas fa-search-plus icon-bx-xs"></i> 
+														</span> 
+														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a>  
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="ow-portfolio">
+											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic6.jpg" alt="">
+												<div class="overlay-bx">
+													<div class="overlay-icon"> 
+														<span data-exthumbimage="images/our-work/pic6.jpg" data-src="images/our-work/pic6.jpg" class="check-km" title="Image 6 Title will come here">		
+															<i class="fas fa-search-plus icon-bx-xs"></i> 
+														</span> 
+														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+                <!-- Portfolio Carousel with no margin END -->
 			</div>
-			<!-- contact area END -->
-		</div>
-		<!-- Content END-->
-	</div>
 
 	<!-- JAVASCRIPT FILES ========================================= -->
 	<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->

@@ -53,7 +53,7 @@
 							<h2 class="title">About our School
 								<a href="about.php"></a>
 							</h2>
-							<h5 class="title-small">អភិវឌ្ឍន៍ និងការបណ្ដុះបណ្ដាល</h5>
+							<h5 class="title-small"style="font-family: 'Moul';">អភិវឌ្ឍន៍ និងការបណ្ដុះបណ្ដាល</h5>
 							<div class="dlab-separator bg-primary"></div>
 						</div>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -61,9 +61,9 @@
 							galley of type and scrambled it to make a type specimen book.</p>
 
 						<ul class="list-check circle primary text-black">
-							<li>អភិវឌ្ឍន៍</li>
-							<li>បណ្ដុះបណ្ដាល</li>
-							<li>ឆ្ពោះទៅកាន់អនាគត​ សម្រាប់កម្ពុជានិង សាសនា</li>
+							<li style="font-family: 'Battambang';">អភិវឌ្ឍន៍</li>
+							<li style="font-family: 'Battambang';">បណ្ដុះបណ្ដាល</li>
+							<li style="font-family: 'Battambang';">ឆ្ពោះទៅកាន់អនាគត​ សម្រាប់កម្ពុជានិង សាសនា</li>
 						</ul>
 						<!-- == Modal == -->
 						<!-- <a href="about.php" class="site-button btnhover6">Read More</a> -->
@@ -78,7 +78,7 @@
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h1 class="modal-title fs-5" id="exampleModalLabel">ប្រវត្ដិសាលាពុទ្ធិក</h1>
+										<h1 class="modal-title fs-5" id="exampleModalLabel" style="font-family: 'Moul';">ប្រវត្ដិសាលាពុទ្ធិក</h1>
 										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 									</div>
 									<div class="modal-body">

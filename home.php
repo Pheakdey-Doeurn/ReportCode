@@ -44,17 +44,17 @@
 						<h2 class="title">About our School
 							<a href="about.php"></a>
 						</h2>
-						<h5 class="title-small">អភិវឌ្ឍន៍ និងការបណ្ដុះបណ្ដាល</h5>
+						<h5 class="title-small" style="font-family: 'Moul';">អភិវឌ្ឍន៍ និងការបណ្ដុះបណ្ដាល</h5>
 						<div class="dlab-separator bg-primary"></div>
 					</div>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
 						been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
 						galley of type and scrambled it to make a type specimen book.</p>
 
-					<ul class="list-check circle primary text-black">
-						<li>អភិវឌ្ឍន៍</li>
-						<li>បណ្ដុះបណ្ដាល</li>
-						<li>ឆ្ពោះទៅកាន់អនាគត​ សម្រាប់កម្ពុជានិង សាសនា</li>
+					<ul class="list-check circle primary text-black" >
+						<li style="font-family: 'Hanuman';">អភិវឌ្ឍន៍</li>
+						<li style="font-family: 'Hanuman';">បណ្ដុះបណ្ដាល</li>
+						<li style="font-family: 'Hanuman';">ឆ្ពោះទៅកាន់អនាគត​ សម្រាប់កម្ពុជានិង សាសនា</li>
 					</ul>
 					<!-- == Modal == -->
 					<!-- <a href="about.php" class="site-button btnhover6">Read More</a> -->
@@ -69,7 +69,7 @@
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h1 class="modal-title fs-5" id="exampleModalLabel">ប្រវត្ដិសាលាពុទ្ធិក</h1>
+									<h1 class="modal-title fs-5" id="exampleModalLabel" style="font-family: 'Moul';">ប្រវត្ដិសាលាពុទ្ធិក</h1>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body">
@@ -94,7 +94,7 @@
 	<div class="section-full bg-gray content-inner">
 		<div class="container">
 			<div class="section-head text-center ">
-				<h2 class="title"> រចនាសម្ព័ន្ធសាលា</h2>
+				<h2 class="title" style="font-family: 'Moul';"> រចនាសម្ព័ន្ធសាលា</h2>
 				<p>There are many variations of passages of Lorem Ipsum typesetting industry has been the industry's
 					standard dummy text ever since the been when an unknown printer.</p>
 			</div>
@@ -107,8 +107,9 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"><a href="#">លោកគ្រូសិរីសត្ថា<span>ហេង សុខន</span></a></h4>
-							<span class="dlab-position">ព្រះនាយក</span>
+							<h4 class="dlab-title"><a href="#"  style="font-family: 'Moul';">លោកគ្រូសិរីសត្ថា<br/>
+							<span style="font-family: 'Moul';">ហេង សុខន</span></a></h4>
+							<span class="dlab-position" style="font-family: 'Moul'; color: #FEFCFC;">ព្រះនាយក</span>
 						</div>
 					</div>
 				</div>
@@ -123,8 +124,8 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"><a href="#">លោក សេង សំណាង</a></h4>
-							<span class="dlab-position">នាយករង</span>
+							<h4 class="dlab-title"><a href="#"style="font-family: 'Moul';">លោក សេង សំណាង</a></h4>
+							<span class="dlab-position" style="font-family: 'Moul';">នាយករង</span>
 						</div>
 					</div>
 				</div>
@@ -137,8 +138,8 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"><a href="#">ព្រះតេជគុណ លត់ ប៊ុនចន</a></h4>
-							<span class="dlab-position">នាយករង</span>
+							<h4 class="dlab-title"><a href="#"style="font-family: 'Moul';">ព្រះតេជព្រះគុណ <br/>លត់ ប៊ុនចន</a></h4>
+							<span class="dlab-position" style="font-family: 'Moul';">នាយករង</span>
 
 						</div>
 					</div>
@@ -155,8 +156,8 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"><a href="teachers-profile.html">លោកគ្រូ ជា សាយឿន</a></h4>
-							<span class="dlab-position">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី១</span>
+							<h4 class="dlab-title"><a href="teachers-profile.html"style="font-family: 'Moul';">លោកគ្រូ ជា សាយឿន</a></h4>
+							<span class="dlab-position" style="font-family: 'Moul';">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី១</span>
 
 						</div>
 					</div>
@@ -170,8 +171,8 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title">លោកគ្រូ រស់ រតនៈ</a></h4>
-							<span class="dlab-position">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី២</span>
+							<h4 class="dlab-title"style="font-family: 'Moul';">លោកគ្រូ រស់ រតនៈ</a></h4>
+							<span class="dlab-position" style="font-family: 'Moul';">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី២</span>
 
 						</div>
 					</div>
@@ -184,8 +185,8 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title">លោកគ្រូ សួង តារា</a></h4>
-							<span class="dlab-position">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី៣</span>
+							<h4 class="dlab-title"style="font-family: 'Moul';">លោកគ្រូ សួង តារា</a></h4>
+							<span class="dlab-position" style="font-family: 'Moul';">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី៣</span>
 						</div>
 					</div>
 				</div>
@@ -196,7 +197,7 @@
 
 	<!-- === Team Dev === -->
 
-	<h5 class="text-center text-bg-danger justify-content-center " style="padding: 5px;">Developer Team</h5>
+	<h5 class="text-center text-bg-danger justify-content-center " style="padding: 5px; font-size: 2rem;">Developer Team</h5>
 	<div class="dev-body">
 		<div class="dev-container">
 			<input type="radio" name="dot" id="one">

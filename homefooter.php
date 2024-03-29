@@ -28,7 +28,7 @@
 							<li><a href="organization.php">organization</a></li>
 							<li><a href="contactus.php">Contact Us</a></li>
 							<li><a href="donate.php">Donate</a></li>
-							<li><a href="admin/login.php">Log In</a></li>
+							<li><a href="login.php">Log In</a></li>
 						</ul>
 					</div>
 				</div>
