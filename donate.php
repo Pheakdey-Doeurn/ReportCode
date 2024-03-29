@@ -40,6 +40,7 @@ include 'homeheader.php'; ?>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div id="graphic-design-1" class="tab-pane">
                                     <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
@@ -53,7 +54,7 @@ include 'homeheader.php'; ?>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div id="developement-1" class="tab-pane">
                                     <div class="col-lg-4 col-md-6 col-sm-6 m-b30">
@@ -66,12 +67,27 @@ include 'homeheader.php'; ?>
                                                 <p class="m-b0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
                                             </div>
                                         </div>
-                                    </div>                                                                    
+                                    </div>
                                 </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <div class=" clearfix">
+                                        <h4 style="font-family: 'Moul';">ចូលរួមផ្ដល់នៅឱកាសសិក្សាសម្រាប់សមណៈសិស្សក្រីក្រ</h4>
+                                    </div>
+                                    <!-- Title separator style 1 -->
+                                    <div class="dlab-separator bg-primary"></div>
+                                    <p style="font-family: 'Hanuman'; font-size: 1rem;">ចូលរួមបរិច្ចាគក្នុងការ ផ្ដល់នៅឱកាសដល់សមណៈសិស្សដែលចង់បន្ដការសិក្សារៀនសូត្រ នៅក្នុងពុទ្ធិកអនុវិទ្យាល័័យថ្មគោលបន្ដទៀត។ 
+                                    <br/> ក្នុងការបង់ថ្លៃ ជូនលោកគ្រូអ្នកគ្រូដែលជា លោកគ្រូអ្នកគ្រូជួល និងម៉ោងចំពោះគ្រូម្នាក់ទៅតាមមុខវិជ្ជានិមួយៗ ជាពិសេសជាកម្លាំងចិត្តក្នុងការប្រគេន បច្ច័យបួនដល់សមណៈសិស្សដែលខិតខំសិក្សារៀនសូត្រ មានចំណាក់ថ្នាក់ពីលេខ១ ដល់ លេខ៥ ។</p>
+                                   
+                                </div>
+                                <div class="section-content"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
             <!-- tabs defult End -->
         </div>
