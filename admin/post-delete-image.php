@@ -1,5 +1,5 @@
 <?php
-    require '../config/config.php';
+require '../config/config.php';
 
 if (isset($_POST['image_id'])) {
     // Sanitize the input to prevent SQL injection
@@ -17,4 +17,3 @@ if (isset($_POST['image_id'])) {
 } else {
     echo "Image ID not provided";
 }
-?>

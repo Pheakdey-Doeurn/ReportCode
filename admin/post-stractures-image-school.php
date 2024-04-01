@@ -115,7 +115,6 @@ include 'header.php';
                             <tr>
                                 <th>File Image</th>
                                 <th>File Name</th>
-                                <th>File Size</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -135,8 +134,7 @@ include 'header.php';
                                     echo "<tr>";
                                     echo "<td><img src='uploads/{$row['file_name']}' alt='Image' style='max-width: 200px; max-height: 200px;'></td>";
                                     echo "<td>{$row['file_name']}</td>";
-                                    echo "<td>{$row['file_size']}</td>";
-                                    echo "<td><button class='btn btn-danger' onclick='deleteImage({$row['id']})'>Delete</button></td>";
+                                    echo "<td><button class='btn btn-danger' onclick='deleteImage({$row['id']})'><i class='fa fa-trash'></i> Delete</button></td>";
                                     echo "</tr>";
                                 }
                             } else {

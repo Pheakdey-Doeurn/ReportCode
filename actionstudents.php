@@ -34,108 +34,57 @@
 </head>
 
 <body id="bg">
-<div class="dlab-divider bg-gray-dark tb10"></div>
-			<div class="section-full bg-white content-inner">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="sort-title clearfix text-center" >
-								<h4 style="font-family: 'Moul';">សកម្មភាពទូទៅរបស់សមណៈសិស្ស</h4>
-							</div>
-							<!-- Portfolio Carousel with no margin -->
-							<div class="section-content box-sort-in m-b30 button-example">
-								<div class="portfolio-carousel-nogap owl-loaded owl-theme owl-carousel mfp-gallery gallery owl-btn-center-lr owl-btn-1">
+
+	<div class="dlab-divider bg-gray-dark tb10"></div>
+	<div class="section-full bg-white content-inner">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="sort-title clearfix text-center">
+						<h4 style="font-family: 'Moul';">សកម្មភាពទូទៅរបស់សមណៈសិស្ស</h4>
+					</div>
+					<!-- Portfolio Carousel with no margin -->
+					<div class="section-content box-sort-in m-b30 button-example">
+						<div class="portfolio-carousel-nogap owl-loaded owl-theme owl-carousel mfp-gallery gallery owl-btn-center-lr owl-btn-1">
+							<?php
+							$sql = "SELECT * FROM pageaction";
+							$result = $conn->query($sql);
+
+							if ($result->num_rows > 0) {
+								// Loop through fetched image data
+								while ($row = $result->fetch_assoc()) {
+									?>
 									<div class="item">
 										<div class="ow-portfolio">
-											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic1.jpg" alt="">
+											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow">
+											<img src="<?php echo $row['uploads']; ?>">
 												<div class="overlay-bx">
-													<div class="overlay-icon"> 
-														<span data-exthumbimage="images/our-work/pic1.jpg" data-src="images/our-work/pic1.jpg" class="check-km" title="Image 1 Title will come here">		
-															<i class="fas fa-search-plus icon-bx-xs"></i> 
+													<div class="overlay-icon">
+														<span data-exthumbimage="<?php echo $row['uploads'] ?>" data-src="<?php echo $row['uploads'] ?>" class="check-km" title="<?php echo $row['uploads'] ?>">
+															<i class="fas fa-search-plus icon-bx-xs"></i>
 														</span>
-														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a> 
+														<a href="javascript:void(0);">
+															<i class="fas fa-link icon-bx-xs"></i>
+														</a>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="item">
-										<div class="ow-portfolio">
-											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic2.jpg" alt="">
-												<div class="overlay-bx">
-													<div class="overlay-icon"> 
-														<span data-exthumbimage="images/our-work/pic2.jpg" data-src="images/our-work/pic2.jpg" class="check-km" title="Image 2 Title will come here">		
-															<i class="fas fa-search-plus icon-bx-xs"></i> 
-														</span> 
-														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a> 
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="ow-portfolio">
-											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic3.jpg" alt="">
-												<div class="overlay-bx">
-													<div class="overlay-icon"> 
-														<span data-exthumbimage="images/our-work/pic3.jpg" data-src="images/our-work/pic3.jpg" class="check-km" title="Image 3 Title will come here">		
-															<i class="fas fa-search-plus icon-bx-xs"></i> 
-														</span>  
-														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a>  
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="ow-portfolio">
-											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic4.jpg" alt="">
-												<div class="overlay-bx">
-													<div class="overlay-icon"> 
-														<span data-exthumbimage="images/our-work/pic4.jpg" data-src="images/our-work/pic4.jpg" class="check-km" title="Image 4 Title will come here">		
-															<i class="fas fa-search-plus icon-bx-xs"></i> 
-														</span> 
-														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a> 
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="ow-portfolio">
-											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic5.jpg" alt="">
-												<div class="overlay-bx">
-													<div class="overlay-icon"> 
-														<span data-exthumbimage="images/our-work/pic5.jpg" data-src="images/our-work/pic5.jpg" class="check-km" title="Image 5 Title will come here">		
-															<i class="fas fa-search-plus icon-bx-xs"></i> 
-														</span> 
-														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a>  
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="ow-portfolio">
-											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow"> <img src="images/our-work/pic6.jpg" alt="">
-												<div class="overlay-bx">
-													<div class="overlay-icon"> 
-														<span data-exthumbimage="images/our-work/pic6.jpg" data-src="images/our-work/pic6.jpg" class="check-km" title="Image 6 Title will come here">		
-															<i class="fas fa-search-plus icon-bx-xs"></i> 
-														</span> 
-														<a href="javascript:void(0);"> <i class="fas fa-link icon-bx-xs"></i> </a> 
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+									<?php
+								}
+							} else {
+								// No images found
+								echo "No images found.";
+							}
+							?>
 						</div>
 					</div>
 				</div>
-                <!-- Portfolio Carousel with no margin END -->
 			</div>
+		</div>
+		<!-- Portfolio Carousel with no margin END -->
+	</div>
 
 	<!-- JAVASCRIPT FILES ========================================= -->
 	<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
