@@ -8,7 +8,7 @@ include 'header.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TKBSS | ImageAction</title>
+    <title>TKBSS | Image Action</title>
 </head>
 
 <body>
@@ -155,7 +155,7 @@ include 'header.php';
                 if (confirm("Are you sure you want to delete this image?")) {
                     // Send an AJAX request to delete the image
                     var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "delete_image.php", true);
+                    xhr.open("POST", "post-delete-image.php", true);
                     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                     xhr.onreadystatechange = function() {
                         if (xhr.readyState == 4 && xhr.status == 200) {
