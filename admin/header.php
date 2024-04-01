@@ -238,9 +238,9 @@
         <!-- Header Menu Area End Here -->
         <?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], "/") + 1); ?>
         <!-- Page Area Start Here -->
-        <div class="dashboard-page-one">
+        <div class="dashboard-page-one" >
             <!-- Sidebar Area Start Here -->
-            <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+            <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color" >
                 <div class="mobile-sidebar-header d-md-none">
                     <div class="header-logo">
                         <a href="index.html"><img src="img/logo1.png" alt="logo"></a>

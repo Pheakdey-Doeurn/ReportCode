@@ -103,8 +103,8 @@ include 'header.php';
                 </ul>
             </div>
             <div class="card height-auto">
+            <?= alertMessage(); ?>
                 <div class="card-body">
-                   <?= alertMessage(); ?>
                     <div class="heading-layout1">
                         <div class="item-title">
                             <h3>Add ImageSlide</h3>
