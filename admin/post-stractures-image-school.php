@@ -121,7 +121,7 @@ include 'header.php';
                         <tbody>
                             <?php
                             // Fetch image data from database
-                            $sql = "SELECT * FROM pageaction";
+                            $sql = "SELECT * FROM pageaction ";
                             $result = $conn->query($sql);
 
                             // Check if the query was successful and if there are any rows returned

@@ -43,24 +43,25 @@
 					<div class="sort-title clearfix text-center">
 						<h4 style="font-family: 'Moul';">សកម្មភាពទូទៅរបស់សមណៈសិស្ស</h4>
 					</div>
+					
 					<!-- Portfolio Carousel with no margin -->
 					<div class="section-content box-sort-in m-b30 button-example">
 						<div class="portfolio-carousel-nogap owl-loaded owl-theme owl-carousel mfp-gallery gallery owl-btn-center-lr owl-btn-1">
 							<?php
-							$sql = "SELECT * FROM pageaction";
+							$sql = "SELECT * FROM pageaction ORDER BY id DESC";
 							$result = $conn->query($sql);
 
 							if ($result->num_rows > 0) {
 								// Loop through fetched image data
 								while ($row = $result->fetch_assoc()) {
-									?>
+							?>
 									<div class="item">
 										<div class="ow-portfolio">
 											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow">
-											<img src="<?php echo $row['uploads']; ?>">
+												<img src="admin/uploads/ <?=$file_name['image'] ?>">
 												<div class="overlay-bx">
 													<div class="overlay-icon">
-														<span data-exthumbimage="<?php echo $row['uploads'] ?>" data-src="<?php echo $row['uploads'] ?>" class="check-km" title="<?php echo $row['uploads'] ?>">
+														<span data-exthumbimage="admin/uploads/<?= $file_name['image'] ?>" data-src="admin/uploads/<?= $file_name['image'] ?>" class="check-km" title="admin/uploads/<?= $file_name['image'] ?>">
 															<i class="fas fa-search-plus icon-bx-xs"></i>
 														</span>
 														<a href="javascript:void(0);">
@@ -71,7 +72,7 @@
 											</div>
 										</div>
 									</div>
-									<?php
+							<?php
 								}
 							} else {
 								// No images found
