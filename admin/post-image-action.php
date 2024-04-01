@@ -74,7 +74,7 @@ include 'header.php';
         <div class="dashboard-content-one">
             <!-- Breadcubs Area Start Here -->
             <div class="breadcrumbs-area">
-                <h3>ImageAction</h3>
+                <h3>Images Action Students </h3>
                 <ul>
                     <li>
                         <a href="admin.php">Home</a>

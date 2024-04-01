@@ -94,7 +94,7 @@ include 'header.php';
         <div class="dashboard-content-one">
             <!-- Breadcubs Area Start Here -->
             <div class="breadcrumbs-area">
-                <h3>ImageSlide</h3>
+                <h3>Image Slide</h3>
                 <ul>
                     <li>
                         <a href="admin.php">Home</a>
@@ -142,7 +142,7 @@ include 'header.php';
                             $res = mysqli_query($conn, "SELECT * FROM pageslide ORDER BY id  DESC");
                             while ($row = mysqli_fetch_array($res)) {
                                 echo '<tr>
-                                       <td><img src="Imageslide/' . $row['image'] . '" width="300" height="100"> </td>
+                                       <td><img src="Imageslide/' . $row['image'] . '" width="200" height="100"> </td>
                                        <td>
                                        <a href=\'slideDelete.php?id=' . $row['id'] . '\' onClick=\'return confirm("Are you sure you want to delete?")\'">
                                         <button class="btn-primary btn_del text-center">Delete</button> 

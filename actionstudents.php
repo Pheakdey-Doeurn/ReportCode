@@ -48,8 +48,8 @@
 					<div class="section-content box-sort-in m-b30 button-example">
 						<div class="portfolio-carousel-nogap owl-loaded owl-theme owl-carousel mfp-gallery gallery owl-btn-center-lr owl-btn-1">
 							<?php
-							$sql = "SELECT * FROM pageaction ORDER BY id DESC";
-							$result = $conn->query($sql);
+							$sqlimageaction = "SELECT * FROM pageaction ORDER BY id DESC";
+							$result = $conn->query($sqlimageaction);
 
 							if ($result->num_rows > 0) {
 								// Loop through fetched image data
@@ -58,10 +58,10 @@
 									<div class="item">
 										<div class="ow-portfolio">
 											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow">
-												<img src="admin/uploads/ <?=$file_name['image'] ?>">
+															<img src="admin/uploads/<?= $row['file_name'] ?>" alt="<?= $row['file_name'] ?>">
 												<div class="overlay-bx">
 													<div class="overlay-icon">
-														<span data-exthumbimage="admin/uploads/<?= $file_name['image'] ?>" data-src="admin/uploads/<?= $file_name['image'] ?>" class="check-km" title="admin/uploads/<?= $file_name['image'] ?>">
+														<span data-exthumbimage="admin/uploads/<?= $row['file_name'] ?>" data-src="admin/uploads/<?= $row['file_name'] ?>" class="check-km" title="admin/uploads/<?= $row['file_name'] ?>">
 															<i class="fas fa-search-plus icon-bx-xs"></i>
 														</span>
 														<a href="javascript:void(0);">

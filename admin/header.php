@@ -286,19 +286,19 @@
                             </ul>
                         </li>
                         <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link <?= $page == 'pslide.php' || $page == 'post_view.php' || $page == 'post-create.php' || $page == 'post-stractures-image-school.php' ? 'menu-active' : '' ?>"><i class="flaticon-books"></i><span>Post</span></a>
+                            <a href="#" class="nav-link <?= $page == 'pslide.php' || $page == 'post_donate.php' || $page == 'post-create.php' || $page == 'post-image-action.php' ? 'menu-active' : '' ?>"><i class="flaticon-books"></i><span>Post</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="post-create.php" class="nav-link <?= $page == 'post-create.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Add Post</a>
+                                    <a href="post-create.php" class="nav-link <?= $page == 'post-create.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Add Image SS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="post_view.php" class="nav-link <?= $page == 'post_view.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>View Post</a>
+                                    <a href="post_donate.php" class="nav-link <?= $page == 'post_donate.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Image Donate QR</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pslide.php" class="nav-link <?= $page == 'pslide.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Image Slide</a>
+                                    <a href="pslide.php" class="nav-link <?= $page == 'pslide.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Image Slide </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="post-stractures-image-school.php" class="nav-link <?= $page == 'post-stractures-image-school.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Image Action</a>
+                                    <a href="post-image-action.php" class="nav-link <?= $page == 'post-image-action.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Image Action Students</a>
                                 </li>
                             </ul>
                         </li>
