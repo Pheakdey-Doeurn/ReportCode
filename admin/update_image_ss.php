@@ -12,29 +12,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
-        $row = $result->fetch_assoc();
-
-        // Check if the form is submitted
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Retrieve form data
-            $name = $_POST['name'];
-            $position = $_POST['position'];
-
-            // Update the corresponding record in the database
-            $sql_update = "UPDATE imagestructure SET name='$name', position='$position' WHERE id = $id";
-
-            if ($conn->query($sql_update) === TRUE) {
-                // Set success message
-                $_SESSION['message'] = "Image updated successfully.";
-
-                // Redirect the user back to the page where they were viewing images
-                header("Location: post-create.php");
-                exit();
-            } else {
-                // Error handling if update fails
-                $_SESSION['message'] = "Error updating record: " . $conn->error;
-            }
-        }
+        $row = $result->fetch_assoc(); // Assign the fetched record to $row
     } else {
         // Redirect the user back to the page where they were viewing images
         $_SESSION['message'] = "Image record not found.";
@@ -47,10 +25,8 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     header("Location: post-create.php");
     exit();
 }
-
-// Close the database connection
-$conn->close();
 ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -58,7 +34,6 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TKBSS | Update Images SS</title>
-
 </head>
 
 <body>
@@ -79,7 +54,6 @@ $conn->close();
             </div>
             <!-- Add New Teacher Area Start Here -->
             <div class="card height-auto">
-
                 <div class="card-body">
                     <!-- Display message if set -->
                     <?php if (isset($_SESSION['message'])) : ?>
@@ -94,30 +68,40 @@ $conn->close();
                             <h3>Update Images Structure School</h3>
                         </div>
                     </div>
-                    <form class="new-added-form" action="post-create.php?id=<?php echo $id; ?>" method="POST" enctype="multipart/form-data">
+                    <!-- Update Form -->
+                    <form class="new-added-form" action="code.php" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-12 form-group">
                                 <label>Name</label>
                                 <input type="text" name="name" placeholder="" required class="form-control" value="<?php echo $row['name']; ?>">
                             </div>
                             <div class="col-xl-6 col-lg-6 col-12 form-group">
-                                <label>Position </label>
+                                <label>Position</label>
                                 <input type="text" name="position" placeholder="" required class="form-control" value="<?php echo $row['position']; ?>">
                             </div>
-
-                            <div class="col-lg-6 col-12 form-group ">
-                                <label class="text-dark-medium">Upload Photo</label>
-                                <input type="file" name="image" class="form-control-file" required>
+                            <div class="col-lg-6 col-12 form-group">
+                                <label class="text-dark-medium">Current Image</label>
+                                <br>
+                                <img src="imagesstructure/<?php echo $row['image']; ?>" width="200" height="100" alt="Current Image">
+                            </div>
+                            <div class="col-lg-6 col-12 form-group">
+                                <label class="text-dark-medium">Upload New Image</label>
+                                <input type="file" name="image" class="form-control-file">
                             </div>
                             <div class="col-12 form-group mg-t-8">
-                                <button type="submit" name="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>
+                                <button type="submit" name="update" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Update</button>
                                 <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">Reset</button>
+                                <a href="post-create.php" class=" btn-fill-lg btn-info bg-info btn-hover-secondary">Back</a>
                             </div>
                         </div>
                     </form>
+                    <!-- End of Update Form -->
                 </div>
             </div>
             <?php include 'footer.php' ?>
+        </div>
+    </div>
 </body>
 
 </html>
