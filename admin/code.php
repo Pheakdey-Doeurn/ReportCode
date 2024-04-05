@@ -1,44 +1,65 @@
 <?php
-      require '../config/function.php';
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+require '../config/function.php';
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
-if (isset($_POST['add-post'])) {
-    $author = validate ($_POST['author']);
-    $tag = validate ($_POST['tag']);
+// Check if form is submitted
+if (isset($_POST['submit'])) {
+    // Upload image
+    $image = $_FILES['image']['name'];
+    $name = $_POST['name'];
+    $position = $_POST['position'];
 
-    if($_FILES['image']['size'] > 0){
+    // Check if the image with the same name already exists in the database
+    $sqlCheck = "SELECT * FROM imagestructure WHERE image = '$image'";
+    $resultCheck = $conn->query($sqlCheck);
+    if ($resultCheck->num_rows > 0) {
+        // Set error message
+        $_SESSION['message'] = "Image already exists in the database.";
+    } else {
+        // File upload directory
+        $targetDir = "imagesstructure/";
+        $targetFilePath = $targetDir . basename($image);
 
-        $image = $_FILES[ 'image' ][ 'name' ];
-        $imgFileType = strtolower(pathinfo($image, PATHINFO_EXTENSION));
-        if($imgFileType != 'jpg' && $imgFileType != 'jpeg' && $imgFileType != 'png'){
-            redirect('post-create.php','Sorry, Only JPG, JPEG, PNG images only');
+        // Move uploaded file to target directory
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)) {
+            // Resize image
+            list($width, $height) = getimagesize($targetFilePath);
+            $newWidth = 280;
+            $newHeight = 330;
+
+            // Create a new image with the specified dimensions
+            $imageResized = imagecreatetruecolor($newWidth, $newHeight);
+
+            // Load the uploaded image
+            $imageTmp = imagecreatefromjpeg($targetFilePath); // Assuming uploaded images are JPEG
+
+            // Resize the image to fit the specified dimensions
+            imagecopyresampled($imageResized, $imageTmp, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+
+            // Save the resized image
+            imagejpeg($imageResized, $targetFilePath);
+
+            // Free up memory
+            imagedestroy($imageResized);
+            imagedestroy($imageTmp);
+
+            // Insert into database
+            $sql = "INSERT INTO imagestructure (name, position, image) VALUES ('$name', '$position', '$image')";
+            if ($conn->query($sql) === TRUE) {
+                // Set success message
+                $_SESSION['message'] = "Image uploaded successfully.";
+            } else {
+                // Set error message
+                $_SESSION['message'] = "Error uploading image: " . $conn->error;
+            }
+        } else {
+            // Set error message if file upload failed
+            $_SESSION['message'] = "Error uploading image.";
         }
-        $path ="uploads/"; // The path to where you want to upload
-        $imgExt = pathinfo($img, PATHINFO_EXTENSION);
-        $filename = time(). '.' .$imgExt;
-
-        $finalImage = "uploads/". $filename;
-
-    }else{
-        $finalImage=NULL;
     }
-    
-    $title = validate ($_POST['title']);
-    $text_body = validate ($_POST['text_body']);
-    $date = validate ($_POST['date']);
 
-    $query = "INSERT INTO post (author, tag, image, title, text_body, date) 
-                  VALUES ('$author', '$tag', '$image', '$title', '$text_body', '$date')";
-
-    $result = mysqli_query($conn, $query);
-     if ($result) {
-        if($_FILES['image']['size'] > 0){
-            move_uploaded_file($_FILES["image"]["tmp_name"], $path.$filename);
-        }
-        redirect('post-create.php','Post added successfully!');
-     }else{
-        redirect('post-create.php','Something  went wrong!');
-     }
+    // Redirect to the page where you want to display the message
+    header("Location: post-create.php");
+    exit();
 }
-
-
+?>
