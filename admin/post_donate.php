@@ -101,7 +101,7 @@ $result = $conn->query($sql);
                                                 <!-- Update button -->
                                                 <a href="post_update_donate.php?id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fas fa-edit"></i> Update</a>
                                                 <!-- Delete button -->
-                                                <a href="delete_image_ss.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');"> <i class="fas fa-trash-alt"></i> Delete</a>
+                                                <a href="post_delete_donate.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');"> <i class="fas fa-trash-alt"></i> Delete</a>
                                             </td>
                                         </tr>
                                 <?php
