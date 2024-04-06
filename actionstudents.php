@@ -43,7 +43,7 @@
 					<div class="sort-title clearfix text-center">
 						<h4 style="font-family: 'Moul';">សកម្មភាពទូទៅរបស់សមណៈសិស្ស</h4>
 					</div>
-					
+
 					<!-- Portfolio Carousel with no margin -->
 					<div class="section-content box-sort-in m-b30 button-example">
 						<div class="portfolio-carousel-nogap owl-loaded owl-theme owl-carousel mfp-gallery gallery owl-btn-center-lr owl-btn-1">
@@ -54,17 +54,19 @@
 							if ($result->num_rows > 0) {
 								// Loop through fetched image data
 								while ($row = $result->fetch_assoc()) {
+									// Change image source to point to image_zoom.php with image ID as a query parameter
+									$image_src = "image_zoom.php?image_id=" . $row['id'];
 							?>
 									<div class="item">
 										<div class="ow-portfolio">
 											<div class="ow-portfolio-img dlab-img-overlay1 dlab-img-effect zoom-slow">
-															<img src="admin/uploads/<?= $row['file_name'] ?>" alt="<?= $row['file_name'] ?>">
+												<img src="admin/uploads/<?= $row['file_name'] ?>" alt="<?= $row['file_name'] ?>">
 												<div class="overlay-bx">
 													<div class="overlay-icon">
 														<span data-exthumbimage="admin/uploads/<?= $row['file_name'] ?>" data-src="admin/uploads/<?= $row['file_name'] ?>" class="check-km" title="admin/uploads/<?= $row['file_name'] ?>">
-															<i class="fas fa-search-plus icon-bx-xs"></i>
+															<i class="fas fa-search-plus icon-bx-xs zoom-in"></i>
 														</span>
-														<a href="javascript:void(0);">
+														<a href="javascript:void(0);" class="copy-link">
 															<i class="fas fa-link icon-bx-xs"></i>
 														</a>
 													</div>
@@ -86,6 +88,87 @@
 		</div>
 		<!-- Portfolio Carousel with no margin END -->
 	</div>
+	<!-- JavaScript for Zoom, Copy Link, Zoom In, Zoom Out, and Close -->
+	<!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const zoomInIcons = document.querySelectorAll('.zoom-in');
+        const zoomOutIcons = document.querySelectorAll('.zoom-out');
+        const closeIcons = document.querySelectorAll('.close-icon');
+
+        // Function to zoom in the image
+        function zoomInImage(image) {
+            // You can adjust the scale factor as needed
+            const scaleFactor = 1.2;
+            // Get the current dimensions of the image
+            const width = image.clientWidth;
+            const height = image.clientHeight;
+            // Calculate new dimensions after zooming in
+            const newWidth = width * scaleFactor;
+            const newHeight = height * scaleFactor;
+            // Apply the new dimensions
+            image.style.width = newWidth + 'px';
+            image.style.height = newHeight + 'px';
+        }
+
+        // Function to zoom out the image
+        function zoomOutImage(image) {
+            // You can adjust the scale factor as needed
+            const scaleFactor = 0.8; // Zoom out by reducing size to 80% of the current size
+            // Get the current dimensions of the image
+            const width = image.clientWidth;
+            const height = image.clientHeight;
+            // Calculate new dimensions after zooming out
+            const newWidth = width * scaleFactor;
+            const newHeight = height * scaleFactor;
+            // Apply the new dimensions
+            image.style.width = newWidth + 'px';
+            image.style.height = newHeight + 'px';
+        }
+
+        zoomInIcons.forEach(function (icon) {
+            icon.addEventListener('click', function () {
+                // Find the image associated with the clicked icon
+                const image = icon.closest('.ow-portfolio-img').querySelector('img');
+                // Call the zoomInImage function
+                zoomInImage(image);
+            });
+        });
+
+        zoomOutIcons.forEach(function (icon) {
+            icon.addEventListener('click', function () {
+                // Find the image associated with the clicked icon
+                const image = icon.closest('.ow-portfolio-img').querySelector('img');
+                // Call the zoomOutImage function
+                zoomOutImage(image);
+            });
+        });
+
+        closeIcons.forEach(function (icon) {
+            icon.addEventListener('click', function () {
+                // Find the image associated with the clicked icon
+                const image = icon.closest('.ow-portfolio-img').querySelector('img');
+                // Reset the image size
+                image.style.width = '';
+                image.style.height = '';
+            });
+        });
+
+        const copyLinkButtons = document.querySelectorAll('.copy-link');
+        copyLinkButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const imageUrl = button.parentElement.previousElementSibling.getAttribute('data-src');
+                // Copy image URL to clipboard
+                navigator.clipboard.writeText(imageUrl).then(function () {
+                    console.log('Image URL copied to clipboard: ' + imageUrl);
+                    // You can also show a success message to the user
+                }).catch(function (error) {
+                    console.error('Failed to copy image URL: ', error);
+                    // Handle error, if any
+                });
+            });
+        });
+    });
+​​​​​    </script> -->
 
 	<!-- JAVASCRIPT FILES ========================================= -->
 	<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
