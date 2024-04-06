@@ -121,6 +121,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
     exit();
 }
 
+// ===================================================================
+// Check if form is submitted
+if (isset($_POST['donate'])) {
+    // Get form data
+    $name = $_POST['name'];
+    $number_code = $_POST['number_code'];
+
+    // File upload handling
+    $targetDir = "imagedonateqr/"; // Directory where images will be stored
+    $fileName = basename($_FILES["image"]["name"]);
+    $targetFilePath = $targetDir . $fileName;
+    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+    // Check if image file is an actual image or fake image
+    $check = getimagesize($_FILES["image"]["tmp_name"]);
+    if ($check !== false) {
+        // Allow certain file formats
+        $allowedTypes = array('jpg', 'jpeg', 'png', 'gif');
+        if (in_array($fileType, $allowedTypes)) {
+            // Check if the file already exists in the database
+            require '../config/function.php'; // Assuming this file contains your database connection
+            $result = $conn->query("SELECT COUNT(*) as count FROM donations WHERE image = '$fileName'");
+            $row = $result->fetch_assoc();
+            if ($row['count'] > 0) {
+                $_SESSION['message'] = "Image with the same name already exists.";
+            } else {
+                // Upload file to server
+                if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)) {
+                    // Insert image data into database
+                    $insert = $conn->query("INSERT INTO donations (name, number_code, image) VALUES ('$name', '$number_code', '$fileName')");
+                    if ($insert) {
+                        $_SESSION['message'] = "Image uploaded successfully.";
+                    } else {
+                        $_SESSION['message'] = "Error uploading image.";
+                    }
+                } else {
+                    $_SESSION['message'] = "Error uploading image.";
+                }
+            }
+        } else {
+            $_SESSION['message'] = "Only JPG, JPEG, PNG & GIF files are allowed.";
+        }
+    } else {
+        $_SESSION['message'] = "File is not an image.";
+    }
+
+    // Redirect back to the page where the form was submitted
+    header("Location: post_donate.php");
+    exit();
+}
 
 ?>
 

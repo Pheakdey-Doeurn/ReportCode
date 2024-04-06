@@ -286,7 +286,7 @@
                             </ul>
                         </li>
                         <li class="nav-item sidebar-nav-item">
-                            <a href="#" class="nav-link <?= $page == 'pslide.php' || $page == 'post_donate.php' || $page == 'post-create.php' || $page == 'post-image-action.php' ? 'menu-active' : '' ?>"><i class="flaticon-books"></i><span>Post</span></a>
+                            <a href="#" class="nav-link <?= $page == 'pslide.php' || $page == 'post_donate.php' || $page == 'post-create.php' || $page == 'post-image-action.php' || $page == 'update_image_ss.php' ? 'menu-active' : '' ?>"><i class="flaticon-books"></i><span>Post</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
                                     <a href="post-create.php" class="nav-link <?= $page == 'post-create.php' ? 'menu-active' : '' ?>"><i class="fas fa-angle-right"></i>Add Image SS</a>
