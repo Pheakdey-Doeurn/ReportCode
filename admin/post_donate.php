@@ -46,7 +46,7 @@ $result = $conn->query($sql);
                         </div>
                         
                     </div>
-                    <form class="new-added-form" action="code.php" method="POST" enctype="multipart/form-data">
+                    <form class="new-added-form" action="postcode.php" method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-12 form-group">
                                 <label>Name Card</label>
@@ -54,7 +54,7 @@ $result = $conn->query($sql);
                             </div>
                             <div class="col-xl-6 col-lg-6 col-12 form-group">
                                 <label>Number Code </label>
-                                <input type="number" name="number_code" placeholder="" required class="form-control">
+                                <input type="number" name="numcode" placeholder="" required class="form-control">
                             </div>
 
                             <div class="col-lg-6 col-12 form-group ">
@@ -94,9 +94,9 @@ $result = $conn->query($sql);
                                     while ($row = $result->fetch_assoc()) {
                                 ?>
                                         <tr>
-                                            <td><img src="imagedonateqr/<?php echo $row['image']; ?>" width="200" height="100"></td>
+                                            <td><img src="imagedonateqr/<?php echo $row['image']; ?>" width="250" height="50"></td>
                                             <td><?php echo $row['name']; ?></td>
-                                            <td><?php echo $row['number_code']; ?></td>
+                                            <td><?php echo $row['numcode']; ?></td>
                                             <td>
                                                 <!-- Update button -->
                                                 <a href="post_update_donate.php?id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fas fa-edit"></i> Update</a>
