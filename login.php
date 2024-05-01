@@ -36,7 +36,7 @@
         <div class="login-page-content">
             <div class="login-box">
                 <div class="item-logo">
-                    <img src="admin/img/logo2.png" alt="logo">
+                    <img src="images/logo.png" alt="logo">
                 </div>
                 <form action="login_process.php" method="post"
                     class="login-form">
