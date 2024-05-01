@@ -1,6 +1,8 @@
 <?php
-	$page = 'home';
-	include 'homeheader.php';
+$page = 'home';
+include 'homeheader.php';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +18,7 @@
 
 	<?php include 'slider.php' ?>
 	<!-- actionstudent -->
-	<?php include 'actionstudents.php'?>
+	<?php include 'actionstudents.php' ?>
 	<!-- Content Section -->
 	<div class="section-full content-inner bg-white">
 		<div class="container">
@@ -51,7 +53,7 @@
 						been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
 						galley of type and scrambled it to make a type specimen book.</p>
 
-					<ul class="list-check circle primary text-black" >
+					<ul class="list-check circle primary text-black">
 						<li style="font-family: 'Hanuman';">អភិវឌ្ឍន៍</li>
 						<li style="font-family: 'Hanuman';">បណ្ដុះបណ្ដាល</li>
 						<li style="font-family: 'Hanuman';">ឆ្ពោះទៅកាន់អនាគត​ សម្រាប់កម្ពុជានិង សាសនា</li>
@@ -98,22 +100,48 @@
 				<p>There are many variations of passages of Lorem Ipsum typesetting industry has been the industry's
 					standard dummy text ever since the been when an unknown printer.</p>
 			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-					<div class="dlab-box m-b30 dlab-team1">
-						<div class="dlab-media">
-							<a href="#">
-								<img width="358" height="460" alt="" src="images/our-team/monk.png" class="lazy" data-src="images/our-team/monk.png">
-							</a>
+			<?php
+			// Execute SQL query to fetch data from the database
+			$sql = "SELECT * FROM imagestructure";
+			$result = $conn->query($sql);
+
+			// Check if there are any rows returned
+			if ($result->num_rows > 0) {
+			?>
+				<div class="row justify-content-center">
+					<?php
+					// Loop through fetched data
+					while ($row = $result->fetch_assoc()) {
+					?>
+						<div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+							<div class="dlab-box m-b30 dlab-team1">
+								<div class="dlab-media">
+									<a href="#">
+										<img width="358" height="460" alt="" src="./admin/imagesstructure/<?php echo $row['image']; ?>" class="lazy" data-src="<?php echo $row['image']; ?>">
+									</a>
+								</div>
+								<div class="dlab-info">
+									<h4 class="dlab-title"><a href="#" style="font-family: 'Moul';"><?php echo $row['name']; ?></a></h4>
+									<span class="dlab-position" style="font-family: 'Moul'; color: #FEFCFC;"><?php echo $row['position']; ?></span>
+								</div>
+							</div>
 						</div>
-						<div class="dlab-info">
-							<h4 class="dlab-title"><a href="#"  style="font-family: 'Moul';">លោកគ្រូសិរីសត្ថា<br/>
-							<span style="font-family: 'Moul';">ហេង សុខន</span></a></h4>
-							<span class="dlab-position" style="font-family: 'Moul'; color: #FEFCFC;">ព្រះនាយក</span>
-						</div>
-					</div>
+					<?php
+					}
+					?>
 				</div>
-			</div>
+			<?php
+			} else {
+				// No results found
+				echo "No results found";
+			}
+
+			// Close the database connection
+			$conn->close();
+			?>
+
+
+
 
 			<div class="row justify-content-evenly">
 				<div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp rounded float-left" data-wow-duration="2s" data-wow-delay="0.4s">
@@ -124,7 +152,7 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"><a href="#"style="font-family: 'Moul';">លោក សេង សំណាង</a></h4>
+							<h4 class="dlab-title"><a href="#" style="font-family: 'Moul';">លោក សេង សំណាង</a></h4>
 							<span class="dlab-position" style="font-family: 'Moul';">នាយករង</span>
 						</div>
 					</div>
@@ -138,7 +166,7 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"><a href="#"style="font-family: 'Moul';">ព្រះតេជព្រះគុណ <br/>លត់ ប៊ុនចន</a></h4>
+							<h4 class="dlab-title"><a href="#" style="font-family: 'Moul';">ព្រះតេជព្រះគុណ <br />លត់ ប៊ុនចន</a></h4>
 							<span class="dlab-position" style="font-family: 'Moul';">នាយករង</span>
 
 						</div>
@@ -156,7 +184,7 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"><a href="teachers-profile.html"style="font-family: 'Moul';">លោកគ្រូ ជា សាយឿន</a></h4>
+							<h4 class="dlab-title"><a href="teachers-profile.html" style="font-family: 'Moul';">លោកគ្រូ ជា សាយឿន</a></h4>
 							<span class="dlab-position" style="font-family: 'Moul';">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី១</span>
 
 						</div>
@@ -171,7 +199,7 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"style="font-family: 'Moul';">លោកគ្រូ រស់ រតនៈ</a></h4>
+							<h4 class="dlab-title" style="font-family: 'Moul';">លោកគ្រូ រស់ រតនៈ</a></h4>
 							<span class="dlab-position" style="font-family: 'Moul';">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី២</span>
 
 						</div>
@@ -185,7 +213,7 @@
 							</a>
 						</div>
 						<div class="dlab-info">
-							<h4 class="dlab-title"style="font-family: 'Moul';">លោកគ្រូ សួង តារា</a></h4>
+							<h4 class="dlab-title" style="font-family: 'Moul';">លោកគ្រូ សួង តារា</a></h4>
 							<span class="dlab-position" style="font-family: 'Moul';">គ្រូបន្ទុកថ្នាក់​ ឆ្នាំទី៣</span>
 						</div>
 					</div>
@@ -318,73 +346,74 @@
 	</div>
 	<!-- End Team Dev -->
 	<div class="section-full content-inner contact-style-1">
-			<div class="container">
-                <div class="row">
-					<!-- Left part start -->
-                    <div class="col-lg-6 m-b30">
-                        <div class="p-a30 bg-white clearfix border-1 radius-sm">
-							<h3>Send Message Us</h3>
-							<div class="dzFormMsg"></div>
-							<form action="#">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group ">
-                                            <div class="input-group">
-												
-                                                <input name="name" type="text"  class="form-control" placeholder="Your Name">												
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group ">
-                                            <div class="input-group"> 
-											    <input name="email" type="email" class="form-control"   placeholder="Your Email" >
-                                            </div>
-                                        </div>
-                                    </div>
-									<div class="col-md-12">
-                                        <div class="form-group">
-                                            <div class="input-group ">
-                                                <input name="sub" type="text"  class="form-control" placeholder="Subject">
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <textarea name="message" rows="4" class="form-control"  placeholder="Your Message..."></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-									<div class="col-md-12">
-										<div class="form-group form-recaptcha">
-											<div class="input-group">
-												<div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-												<input class="form-control d-none" style="display:none;" data-recaptcha="true"  data-error="Please complete the Captcha">
-											</div>
+		<div class="container">
+			<div class="row">
+				<!-- Left part start -->
+				<div class="col-lg-6 m-b30">
+					<div class="p-a30 bg-white clearfix border-1 radius-sm">
+						<h3>Send Message Us</h3>
+						<div class="dzFormMsg"></div>
+						<form action="#">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group ">
+										<div class="input-group">
+
+											<input name="name" type="text" class="form-control" placeholder="Your Name">
 										</div>
 									</div>
-                                    <div class="col-md-12 button-area">
-										<span class="text-center "></span>
-                                        <button type="submit" class="site-button ">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- Left part END -->
-					<!-- right part start -->
-                    <div class="col-lg-6 m-b30 d-flex">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.2705867517!2d103.09890569999999!3d13.2710238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311acb9357a7ead7%3A0xf55873dbb6c7075c!2sWat%20Kork%20Kdouch!5e0!3m2!1sen!2skh!4v1707232387025!5m2!1sen!2skh" class="align-self-stretch radius-sm" style="border:0; width:100%;  min-height:100%;" allowfullscreen></iframe>
-                    </div>
-                    <!-- right part END -->
-                </div>
-            </div>
-        </div>
-        <!-- contact area  END -->
-		<!-- Content -->
-		<script src="js/script.js"></script>
-		<scrip src="js/jquery.min.js"></script>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group ">
+										<div class="input-group">
+											<input name="email" type="email" class="form-control" placeholder="Your Email">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<div class="input-group ">
+											<input name="sub" type="text" class="form-control" placeholder="Subject">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<div class="input-group">
+											<textarea name="message" rows="4" class="form-control" placeholder="Your Message..."></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group form-recaptcha">
+										<div class="input-group">
+											<div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+											<input class="form-control d-none" style="display:none;" data-recaptcha="true" data-error="Please complete the Captcha">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 button-area">
+									<span class="text-center "></span>
+									<button type="submit" class="site-button ">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- Left part END -->
+				<!-- right part start -->
+				<div class="col-lg-6 m-b30 d-flex">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.2705867517!2d103.09890569999999!3d13.2710238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311acb9357a7ead7%3A0xf55873dbb6c7075c!2sWat%20Kork%20Kdouch!5e0!3m2!1sen!2skh!4v1707232387025!5m2!1sen!2skh" class="align-self-stretch radius-sm" style="border:0; width:100%;  min-height:100%;" allowfullscreen></iframe>
+				</div>
+				<!-- right part END -->
+			</div>
+		</div>
+	</div>
+	<!-- contact area  END -->
+	<!-- Content -->
+	<script src="js/script.js"></script>
+	<scrip src="js/jquery.min.js">
+		</script>
 		<!-- Content END-->
 		<?php include 'homefooter.php' ?>
 
