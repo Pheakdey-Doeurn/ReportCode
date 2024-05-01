@@ -94,7 +94,7 @@ $result = $conn->query($sql);
                                     while ($row = $result->fetch_assoc()) {
                                 ?>
                                         <tr>
-                                            <td><img src="imagedonateqr/<?php echo $row['image']; ?>" width="250" height="50"></td>
+                                            <td><img src="imagedonateqr/<?php echo $row['image']; ?>" width="250" height="40"></td>
                                             <td><?php echo $row['name']; ?></td>
                                             <td><?php echo $row['numcode']; ?></td>
                                             <td>
