@@ -38,7 +38,7 @@
                 <div class="item-logo">
                     <img src="images/logo.png" alt="logo">
                 </div>
-                <form action="login_process.php" method="post"
+                <form id="login-form" action="login_process.php" method="post"
                     class="login-form">
                     <div class="form-group">
                         <label>Username</label>
@@ -54,7 +54,7 @@
                         <button type="submit" value="Login" class="login-btn">Login</button>
                     </div>
                 </form>
-                
+                <div id="login-message"></div>
             </div>
         </div>
     </div>
@@ -71,6 +71,31 @@
     <script src="admin/js/jquery.scrollUp.min.js"></script>
     <!-- Custom Js -->
     <script src="admin/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#login-form').submit(function (event) {
+                event.preventDefault();
+                var form = $(this);
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function (data) {
+                        if (data === 'success') {
+                            $('#login-message').html('<div class="alert alert-success" role="alert">Login successful!</div>');
+                            // Redirect to another page or perform other actions for successful login
+                        } else {
+                            $('#login-message').html('<div class="alert alert-danger" role="alert">Login failed. Please check your credentials.</div>');
+                        }
+                    },
+                    error: function () {
+                        $('#login-message').html('<div class="alert alert-danger" role="alert">An error occurred while processing your request. Please try again later.</div>');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 
