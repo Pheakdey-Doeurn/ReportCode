@@ -51,7 +51,7 @@
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="form-group">
-                        <button type="submit" value="Login" class="login-btn">Login</button>
+                        <button type="submit" name="login" value="Login" class="login-btn">Login</button>
                     </div>
                 </form>
                 <div id="login-message"></div>

@@ -5,30 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../admin/css/normalize.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../admin/css/main.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../admin/css/bootstrap.min.css">
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="../admin/css/all.min.css">
     <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="fonts/flaticon.css">
+    <link rel="stylesheet" href="../admin/fonts/flaticon.css">
     <!-- Full Calender CSS -->
-    <link rel="stylesheet" href="css/fullcalendar.min.css">
+    <link rel="stylesheet" href="../admin/css/fullcalendar.min.css">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="../admin/css/animate.min.css">
     <!-- Data Table CSS -->
-    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../admin/css/jquery.dataTables.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../admin/style.css">
     <!-- Select 2 CSS -->
-    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="../admin/css/select2.min.css">
     <!-- Modernize js -->
-    <script src="js/modernizr-3.6.0.min.js"></script>
+    <script src="../admin/js/modernizr-3.6.0.min.js"></script>
 
 <body>
     <!-- Preloader Start Here -->
